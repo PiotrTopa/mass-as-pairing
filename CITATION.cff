@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Mass as pairing: companion code and certified claims"
+type: software
+authors:
+  - family-names: Topa
+    given-names: Piotr
+license: MIT
+repository-code: "https://github.com/PiotrTopa/mass-as-pairing"
+version: "1.0.0"
+preferred-citation:
+  type: article
+  title: "Mass as pairing"
+  authors:
+    - family-names: Topa
+      given-names: Piotr
+  doi: "10.XXXX/PLACEHOLDER"
+  year: 2026
+identifiers:
+  - type: doi
+    value: "10.XXXX/PLACEHOLDER-DATA"
+    description: "Raw chain data archive (placeholder until deposited)"
