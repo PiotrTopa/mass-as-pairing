@@ -1,0 +1,25 @@
+kind	path	md5	bytes	produced_by	used_by
+config	data/configs/eps_L8_y2.41_afm.npz	aa7aff40e3f0bb0f0a8fa3b9fed1f28c	97847	scripts/derive_configs.py	tests/test_remeasure.py
+config	data/configs/n1_L4_y2.41_h0.5_aaaa.npz	710bcd290039b7e6c437eb11e24ba5a0	21050	scripts/derive_configs.py	tests/test_remeasure.py
+config	data/configs/n1_L4_y3_h2_aaaa.npz	c04b15db73eb1bc530f2eb49369127d4	40811	scripts/derive_configs.py	tests/test_remeasure.py
+config	data/configs/n1_L6_y2.41_h2_aaaa.npz	5479888f233a5fcbd7d59a2143bd29c7	45475	scripts/derive_configs.py	tests/test_remeasure.py
+config	data/configs/n1_L6_y3_h2_aaaa.npz	3aba9c6cc54a492e91d95652c315fed4	45429	scripts/derive_configs.py	tests/test_remeasure.py
+config	data/configs/wedge_L6_y2.41_g0.1_edge-.npz	cd3e76a6a29e95012458a913c432b0ab	94631	scripts/derive_configs.py	tests/test_remeasure.py
+raw	results/xi_scan/F12_hyst_L8_afm/L8_y2.41_k-0.01.npz	4eeb2acec1920526acf714836e4db7d7	882122	chain run (archive)	tests/test_remeasure.py
+raw	results/xi_scan/F9_X_y0exit/L6_y2.41_k-0.01_g0.1_g6-0.1.npz	3d7124f4433c79ce4405f1048f5a827d	710198	chain run (archive)	tests/test_remeasure.py
+raw	results/xi_scan/K_N1_S0/L4/L4_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	7424934d8b9b9e3cd83367a973e36442	3119258	chain run (archive)	tests/test_remeasure.py
+raw	results/xi_scan/K_N1_S0/L4/L4_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	f9d1b36ce7f36570b026e82cd83d8779	3119250	chain run (archive)	tests/test_remeasure.py
+raw	results/xi_scan/K_N1_S1/L6/L6_y2.41_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	666274a79cd303d04dabab0820eb7462	9083538	chain run (archive)	tests/test_remeasure.py
+raw	results/xi_scan/K_N1_S1/L6/L6_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	077e84bbd0de345f725042c0f41e97fd	18109530	chain run (archive)	tests/test_remeasure.py
+reference	tests/reference/chains/eps_exact.npz	56c7d23ff1bffeee740b2af5b230d7f3	13218	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/eps_hasenbusch.npz	bca652a9849f0affa706ed2e7a0866e9	13408	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/eps_noise.npz	9772f7234de5a2ecdfce93ad88ad8186	13052	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/links.npz	e0285edf4c31c8b9e8277d9848222c84	29374	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/n1_exact.npz	47bab724f084e06b43d99f99c24cf774	46723	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/n1_noise.npz	35d302f6885cb29af11aefb3fb9a09f1	32415	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/selective.npz	dd369c009af260e89ac096e341d13aec	22515	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/source_c0.npz	53dc3547f205c8b57243a464d21f44a6	33315	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/wedge_exact.npz	7d9086eb98e5124860818680c2cda94d	45177	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/wedge_hasenbusch.npz	ed4ca8d2a58f2db943edf903405f4e1f	33315	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/wedge_noise.npz	cc2ac06a2eae324b8ca336e5d4df5e3f	33559	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/components.npz	0933d7c70c81f69235eb983ff87a9c1e	850250	tests/equivalence/make_component_reference.py	tests/equivalence

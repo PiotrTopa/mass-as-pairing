@@ -1,0 +1,25 @@
+kind	path	md5	bytes	produced_by	used_by
+raw	results/xi_scan/F12_hyst_L8_afm/L8_y2.41_k-0.01.npz	4eeb2acec1920526acf714836e4db7d7	882122	chain run (archive)	tests/test_remeasure.py
+config	data/configs/eps_L8_y2.41_afm.npz	-	-	scripts/derive_configs.py	tests/test_remeasure.py
+raw	results/xi_scan/K_N1_S0/L4/L4_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	7424934d8b9b9e3cd83367a973e36442	3119258	chain run (archive)	tests/test_remeasure.py
+config	data/configs/n1_L4_y2.41_h0.5_aaaa.npz	-	-	scripts/derive_configs.py	tests/test_remeasure.py
+raw	results/xi_scan/K_N1_S0/L4/L4_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	f9d1b36ce7f36570b026e82cd83d8779	3119250	chain run (archive)	tests/test_remeasure.py
+config	data/configs/n1_L4_y3_h2_aaaa.npz	-	-	scripts/derive_configs.py	tests/test_remeasure.py
+raw	results/xi_scan/K_N1_S1/L6/L6_y2.41_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	666274a79cd303d04dabab0820eb7462	9083538	chain run (archive)	tests/test_remeasure.py
+config	data/configs/n1_L6_y2.41_h2_aaaa.npz	-	-	scripts/derive_configs.py	tests/test_remeasure.py
+raw	results/xi_scan/K_N1_S1/L6/L6_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	077e84bbd0de345f725042c0f41e97fd	18109530	chain run (archive)	tests/test_remeasure.py
+config	data/configs/n1_L6_y3_h2_aaaa.npz	-	-	scripts/derive_configs.py	tests/test_remeasure.py
+raw	results/xi_scan/F9_X_y0exit/L6_y2.41_k-0.01_g0.1_g6-0.1.npz	3d7124f4433c79ce4405f1048f5a827d	710198	chain run (archive)	tests/test_remeasure.py
+config	data/configs/wedge_L6_y2.41_g0.1_edge-.npz	-	-	scripts/derive_configs.py	tests/test_remeasure.py
+reference	tests/reference/chains/eps_exact.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/eps_hasenbusch.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/eps_noise.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/links.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/n1_exact.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/n1_noise.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/selective.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/source_c0.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/wedge_exact.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/wedge_hasenbusch.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/chains/wedge_noise.npz	-	-	tests/equivalence/make_reference.py	tests/equivalence
+reference	tests/reference/components.npz	-	-	tests/equivalence/make_component_reference.py	tests/equivalence
