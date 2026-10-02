@@ -1,0 +1,69 @@
+# Mass as pairing — companion code and certified claims
+
+This repository holds the lattice code, the data products and the machine-checked claims behind the paper
+*Mass as pairing*. Fermion mass is read as pairing with a partner of conjugate charge: the Higgs builds the partner
+from another elementary fermion, the seesaw uses the self-conjugate ν_R with a ℤ₄-odd Majorana mass, and symmetric mass
+generation (SMG) builds it from the fermions themselves (ψ̄ψ̄ψ ∈ 16̄). The repository establishes, for one Spin(10)
+generation and its lattice proxy (four reduced staggered flavours with an ε vertex):
+
+- **K1** the structure and partner algebra (ℤ₄ the unique anomaly-free remnant, ℤ₄² = (−1)^F);
+- **K2** the sign-free class is flavour-democratic;
+- **K3** the ℤ₄-odd elementary (126) channel does not condense on the sign-free family (L ≤ 8);
+- **K4** composite takeover: in the SMG phase the Majorana response sits in the ε-vertex composite;
+- **K5** with an explicit Majorana mass on half of the generation, the other half keeps its own SMG gap (no light mass
+  without spontaneous breaking);
+- **K6** the corner-block frequency exponent as a per-configuration pole/zero readout;
+- **K7** the SMG transition shows no first-order signature at L ≤ 8;
+- **K8** anti-seesaw: at the critical point the explicit mass gaps the other half (a crossover, not a power law);
+- **M** the critical-seesaw moonshot is closed as a null.
+
+Statements, numbers and caveats: [RESULTS.md](RESULTS.md). Every claim is a directory `claims/<ID>/` with `claim.md`
+(statement, numbers, method, caveats, data) and `check.py` (which recomputes it and prints `PASS <ID>`); the status table
+is [claims/STATUS.md](claims/STATUS.md).
+
+## Install
+
+Python ≥ 3.11, CPU only (cupy optional for GPU runs of the chain runner).
+
+```
+python3 -m venv .venv
+.venv/bin/pip install -e '.[dev]'        # numpy, scipy; pytest, ruff, black, matplotlib
+```
+
+Tested with the versions in `requirements-lock.txt`.
+
+## Reproduce
+
+```
+make test       # unit and equivalence tests (minutes)
+make check      # every claim's check.py and the PASS table (claims/STATUS.md); about 1 h on 4 cores
+make results    # tables in results/
+make figures    # figures in figures/
+```
+
+All of these run from the committed derived data. Rebuilding the derived data needs the raw chain archive
+(`make derived MASSPAIRING_ARCHIVE=/path/to/archive`; files and md5 sums in [data/MANIFEST.tsv](data/MANIFEST.tsv)).
+New chains: `python scripts/run_chain.py --help`.
+
+## Layout
+
+```
+masspairing/        the package: lattice, patterns, link fields, operator, action, HMC, measures, analysis, algebra
+claims/<ID>/        claim.md + check.py per certified claim; claims/run_all.py runs them all
+data/derived/       derived data (time series without configurations, frozen scans); data/configs/ stored configurations
+data/MANIFEST.tsv   every data file: path, md5, size, producer, users (raw archive files included)
+results/  figures/  final tables and figures, one script each in scripts/
+tests/              unit tests, equivalence tests against the notebook implementation (frozen references)
+docs/PLAN.md        layout, claim identifiers and their notebook provenance, data strategy, audit
+```
+
+Claim identifiers: `K<n>.<m>` supports paper claim K<n>; `I.<m>` certifies an instrument; `M.1` is the moonshot null.
+
+## Provenance
+
+The research history (all runs, superseded analyses, exploratory claims) is archived in the notebook repository
+`PiotrTopa/unhiggsed_notebook`, commit `3c4a02c`.
+
+## How to cite
+
+See [CITATION.cff](CITATION.cff) (paper DOI to be added). License: MIT.

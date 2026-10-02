@@ -20,6 +20,9 @@ results:         ## final tables in results/
 figures:         ## figures in figures/
 	for s in scripts/fig_*.py; do $(PY) $$s || exit 1; done
 
+trace:          ## every number in RESULTS.md found in the tagged check outputs (after make check)
+	$(PY) scripts/trace_results.py
+
 lint:
 	$(PY) -m ruff check masspairing scripts tests claims
 	$(PY) -m black --check masspairing scripts tests claims
