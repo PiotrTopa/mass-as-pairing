@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "masspairing"
+version = "1.0.0"
+description = "Lattice code and certified claims of the paper \"Mass as pairing\""
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Piotr Topa" }]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.2,<3",
+    "scipy>=1.15,<2",
+]
+
+[project.optional-dependencies]
+figures = ["matplotlib>=3.9,<4"]
+gpu = ["cupy-cuda12x>=13,<15"]
+dev = ["pytest>=8,<10", "ruff>=0.15,<1", "black>=25,<27", "matplotlib>=3.9,<4"]
+
+[tool.setuptools.packages.find]
+include = ["masspairing*"]
+
+[tool.black]
+line-length = 120
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = [
+    "E731",  # lambda assignments are used for short local kernels
+    "E741",  # single-letter physics names (l, I) are kept
+    "B023",  # closures over loop variables are evaluated inside the loop
+    "UP015",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"claims/*/check.py" = ["E402"]
+"scripts/*.py" = ["E402"]
+"tests/*" = ["E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
