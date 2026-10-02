@@ -1,0 +1,22 @@
+claim,y,reference,run,observable,acceptance,metropolis,e_metropolis,rhmc,e_rhmc,pull
+I.1,0.0,metropolis_y0,rhmc_y0,sigma2,0.993,1.13374,0.0086,1.1257,0.0055,+0.79
+I.1,1.2,metropolis_y1.2,rhmc_y1.2,sigma2,0.997,1.1409,0.0027,1.13534,0.003,+1.36
+I.1,1.2,metropolis_y1.2,rhmc_y1.2,O4,0.997,0.00161516,5.4e-06,0.00160894,9e-06,+0.59
+I.1,1.2,metropolis_y1.2,rhmc_y1.2,Sigma_abs,0.997,0.238018,0.0012,0.238829,0.0019,-0.36
+I.1,1.2,metropolis_y1.2,rhmc_y1.2,Sigma_stag_abs,0.997,0.254727,0.0011,0.253999,0.0016,+0.37
+I.1,1.2,metropolis_y1.2,rhmc_y1.2,phi_stag_sq,0.997,0.000457527,3.8e-06,0.000450751,5.7e-06,+0.98
+I.2,1.2,metropolis_y1.2,hasenbusch_y1.2,sigma2,1.000,1.1409,0.0027,1.13282,0.0041,+1.64
+I.2,1.2,metropolis_y1.2,hasenbusch_y1.2,O4,1.000,0.00161516,5.4e-06,0.00161179,1.1e-05,+0.28
+I.2,1.2,metropolis_y1.2,hasenbusch_y1.2,Sigma_abs,1.000,0.238018,0.0012,0.239023,0.002,-0.43
+I.2,1.2,metropolis_y1.2,hasenbusch_y1.2,Sigma_stag_abs,1.000,0.254727,0.0011,0.254985,0.0019,-0.12
+I.2,1.2,metropolis_y1.2,hasenbusch_y1.2,phi_stag_sq,1.000,0.000457527,3.8e-06,0.000458666,6e-06,-0.16
+I.2,2.5,metropolis_y2.5,hasenbusch_y2.5,sigma2,0.999,1.16416,0.0042,1.17185,0.0032,-1.47
+I.2,2.5,metropolis_y2.5,hasenbusch_y2.5,O4,0.999,0.00827715,6.4e-05,0.00830904,6.9e-05,-0.34
+I.2,2.5,metropolis_y2.5,hasenbusch_y2.5,Sigma_abs,0.999,0.221522,0.0016,0.219762,0.003,+0.52
+I.2,2.5,metropolis_y2.5,hasenbusch_y2.5,Sigma_stag_abs,0.999,0.299766,0.0026,0.298722,0.0031,+0.26
+I.2,2.5,metropolis_y2.5,hasenbusch_y2.5,phi_stag_sq,0.999,0.00321645,5.3e-05,0.00317205,6.1e-05,+0.55
+I.2 sabotage,2.5,metropolis_y2.5,sabotage_heavy_only_y2.5,sigma2,0.976,1.16416,0.0042,1.20672,0.0046,-6.87
+I.2 sabotage,2.5,metropolis_y2.5,sabotage_heavy_only_y2.5,O4,0.976,0.00827715,6.4e-05,0.0087933,0.00011,-4.06
+I.2 sabotage,2.5,metropolis_y2.5,sabotage_heavy_only_y2.5,Sigma_abs,0.976,0.221522,0.0016,0.239778,0.0028,-5.59
+I.2 sabotage,2.5,metropolis_y2.5,sabotage_heavy_only_y2.5,Sigma_stag_abs,0.976,0.299766,0.0026,0.273372,0.0045,+5.10
+I.2 sabotage,2.5,metropolis_y2.5,sabotage_heavy_only_y2.5,phi_stag_sq,0.976,0.00321645,5.3e-05,0.00284391,7.1e-05,+4.18

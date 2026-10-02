@@ -1,0 +1,34 @@
+{
+ "a_ordered_memory": {
+  "delta_m2": 0.005671632414757698,
+  "H1_8": "positive",
+  "H1_8_max": 7.399240834244545,
+  "H1": "positive",
+  "afm_scored": true,
+  "verdict": "UNDECIDED"
+ },
+ "b_two_state": {
+  "bimodal": [
+   "m",
+   "sig2"
+  ],
+  "hot_flags": [],
+  "hot_tau": 19.454167303020334,
+  "hot_scored": true,
+  "H1_8": "positive",
+  "H1_8_max": 7.861836796167594,
+  "H2": "indicative",
+  "verdict": "UNDECIDED"
+ },
+ "c_late_drift": {
+  "afm_half_pull_m2": 3.144325980738861,
+  "afm_flags": [
+   "tau>N/50",
+   "non-stationary"
+  ],
+  "afm_scored": false,
+  "pc_scored": false,
+  "H1_8": "negative",
+  "verdict": "UNDECIDED"
+ }
+}

@@ -1,0 +1,217 @@
+{
+ "note": "Lane K2b (C171): phase labels of the five K2-T3a-sharpen chains; rules docs/lanes/K2-T3a.md \u00a71.6 (+ amendment 4). Stored configuration: `sigma_final`.",
+ "chains": [
+  {
+   "file": "results/xi_scan/F12_L8_k-0.01_inner/L8_y2.368_k-0.01.npz",
+   "config_array": "sigma_final",
+   "config_shape": [
+    3,
+    8,
+    8,
+    8,
+    8
+   ],
+   "L": 8,
+   "y": 2.368,
+   "kappa": -0.01,
+   "start": "hot",
+   "seed": 9701,
+   "ntraj": 1000,
+   "nsteps": 50,
+   "acceptance": 0.942,
+   "phase": "SYM",
+   "near_critical": true,
+   "Sigma_stag_abs": [
+    0.06959,
+    0.00229
+   ],
+   "O4": [
+    0.03199,
+    0.00098
+   ],
+   "xiL": [
+    0.3436,
+    0.0136
+   ],
+   "tau_int_m2": 5.86,
+   "scored": true,
+   "flags": [],
+   "conflict": null,
+   "bimodal": {
+    "m": false,
+    "sig2": false,
+    "O4": false
+   }
+  },
+  {
+   "file": "results/xi_scan/F12_hyst_L8_afm/L8_y2.41_k-0.01.npz",
+   "config_array": "sigma_final",
+   "config_shape": [
+    3,
+    8,
+    8,
+    8,
+    8
+   ],
+   "L": 8,
+   "y": 2.41,
+   "kappa": -0.01,
+   "start": "afm",
+   "seed": 9711,
+   "ntraj": 2000,
+   "nsteps": 50,
+   "acceptance": 0.834,
+   "phase": "critical",
+   "near_critical": true,
+   "Sigma_stag_abs": [
+    0.0782,
+    0.0033
+   ],
+   "O4": [
+    0.0411,
+    0.00115
+   ],
+   "xiL": [
+    0.3856,
+    0.0188
+   ],
+   "tau_int_m2": 16.81,
+   "scored": true,
+   "flags": [],
+   "conflict": null,
+   "bimodal": {
+    "m": false,
+    "sig2": false,
+    "O4": false
+   }
+  },
+  {
+   "file": "results/xi_scan/F12_hyst_L8_cold/L8_y2.41_k-0.01.npz",
+   "config_array": "sigma_final",
+   "config_shape": [
+    3,
+    8,
+    8,
+    8,
+    8
+   ],
+   "L": 8,
+   "y": 2.41,
+   "kappa": -0.01,
+   "start": "cold",
+   "seed": 9712,
+   "ntraj": 2000,
+   "nsteps": 50,
+   "acceptance": 0.838,
+   "phase": "critical",
+   "near_critical": true,
+   "Sigma_stag_abs": [
+    0.08167,
+    0.00249
+   ],
+   "O4": [
+    0.04257,
+    0.00122
+   ],
+   "xiL": [
+    0.3928,
+    0.0142
+   ],
+   "tau_int_m2": 10.28,
+   "scored": true,
+   "flags": [],
+   "conflict": null,
+   "bimodal": {
+    "m": false,
+    "sig2": false,
+    "O4": false
+   }
+  },
+  {
+   "file": "results/xi_scan/F12_hyst_L8_hot/L8_y2.41_k-0.01.npz",
+   "config_array": "sigma_final",
+   "config_shape": [
+    3,
+    8,
+    8,
+    8,
+    8
+   ],
+   "L": 8,
+   "y": 2.41,
+   "kappa": -0.01,
+   "start": "hot",
+   "seed": 9713,
+   "ntraj": 2000,
+   "nsteps": 50,
+   "acceptance": 0.846,
+   "phase": "critical",
+   "near_critical": true,
+   "Sigma_stag_abs": [
+    0.08183,
+    0.00351
+   ],
+   "O4": [
+    0.04185,
+    0.00193
+   ],
+   "xiL": [
+    0.4109,
+    0.0197
+   ],
+   "tau_int_m2": 16.67,
+   "scored": true,
+   "flags": [],
+   "conflict": null,
+   "bimodal": {
+    "m": false,
+    "sig2": false,
+    "O4": false
+   }
+  },
+  {
+   "file": "results/xi_scan/F12_L8_k-0.01_inner/L8_y2.452_k-0.01.npz",
+   "config_array": "sigma_final",
+   "config_shape": [
+    3,
+    8,
+    8,
+    8,
+    8
+   ],
+   "L": 8,
+   "y": 2.452,
+   "kappa": -0.01,
+   "start": "afm",
+   "seed": 9702,
+   "ntraj": 1000,
+   "nsteps": 50,
+   "acceptance": 0.738,
+   "phase": "SMG",
+   "near_critical": true,
+   "Sigma_stag_abs": [
+    0.08533,
+    0.00734
+   ],
+   "O4": [
+    0.05741,
+    0.00173
+   ],
+   "xiL": [
+    0.3927,
+    0.0408
+   ],
+   "tau_int_m2": 29.33,
+   "scored": false,
+   "flags": [
+    "tau>N/50"
+   ],
+   "conflict": null,
+   "bimodal": {
+    "m": false,
+    "sig2": false,
+    "O4": false
+   }
+  }
+ ]
+}
