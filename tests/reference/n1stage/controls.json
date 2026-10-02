@@ -1,0 +1,548 @@
+{
+ "real": {
+  "y2.41": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor)",
+   "class_L8": "UNDECIDED",
+   "class_L6": "UNDECIDED",
+   "b_flag": false,
+   "a_e": true,
+   "gap": false,
+   "L8": {
+    "a_rL": true,
+    "a_g": false,
+    "c": false
+   },
+   "L6": {
+    "a_rL": true,
+    "a_g": false,
+    "c": false
+   },
+   "L6x12": {
+    "a_rL": true,
+    "c": false
+   }
+  },
+  "y3.0": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor) \u2014 (b) flagged (SSB channel unaffected)",
+   "class_L8": "(b)",
+   "class_L6": "(b)",
+   "b_flag": true,
+   "a_e": false,
+   "gap": false,
+   "L8": {
+    "a_rL": true,
+    "a_g": true,
+    "c": false
+   },
+   "L6": {
+    "a_rL": true,
+    "a_g": true,
+    "c": false
+   },
+   "L6x12": {
+    "a_rL": true,
+    "c": false
+   }
+  },
+  "M": {
+   "triggered": false,
+   "fall6": false,
+   "fall8": false,
+   "Vstable": false,
+   "absent": true
+  }
+ },
+ "S1": {
+  "y2.41": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor)",
+   "class_L8": "UNDECIDED",
+   "class_L6": "(c)",
+   "b_flag": false,
+   "a_e": true,
+   "gap": false,
+   "L8": {
+    "a_rL": false,
+    "a_g": false,
+    "c": false
+   },
+   "L6": {
+    "a_rL": false,
+    "a_g": false,
+    "c": true
+   },
+   "L6x12": {
+    "a_rL": false,
+    "c": false
+   }
+  },
+  "y3.0": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor) \u2014 (b) flagged (SSB channel unaffected)",
+   "class_L8": "(b)",
+   "class_L6": "(b)",
+   "b_flag": true,
+   "a_e": false,
+   "gap": false,
+   "L8": {
+    "a_rL": false,
+    "a_g": true,
+    "c": false
+   },
+   "L6": {
+    "a_rL": false,
+    "a_g": true,
+    "c": false
+   },
+   "L6x12": {
+    "a_rL": false,
+    "c": false
+   }
+  },
+  "M": {
+   "triggered": false,
+   "fall6": true,
+   "fall8": false,
+   "Vstable": false,
+   "absent": false
+  }
+ },
+ "S1_prime": {
+  "y2.41": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor)",
+   "class_L8": "UNDECIDED",
+   "class_L6": "(c)",
+   "b_flag": false,
+   "a_e": true,
+   "gap": false,
+   "L8": {
+    "a_rL": false,
+    "a_g": false,
+    "c": false
+   },
+   "L6": {
+    "a_rL": false,
+    "a_g": false,
+    "c": true
+   },
+   "L6x12": {
+    "a_rL": false,
+    "c": false
+   }
+  },
+  "y3.0": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor) \u2014 (b) flagged (SSB channel unaffected)",
+   "class_L8": "(b)",
+   "class_L6": "(b)",
+   "b_flag": true,
+   "a_e": false,
+   "gap": false,
+   "L8": {
+    "a_rL": false,
+    "a_g": false,
+    "c": true
+   },
+   "L6": {
+    "a_rL": false,
+    "a_g": false,
+    "c": true
+   },
+   "L6x12": {
+    "a_rL": false,
+    "c": false
+   }
+  },
+  "M": {
+   "triggered": false,
+   "fall6": true,
+   "fall8": false,
+   "Vstable": false,
+   "absent": false
+  }
+ },
+ "S1_double_prime": {
+  "y2.41": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor)",
+   "class_L8": "(c)",
+   "class_L6": "(c)",
+   "b_flag": false,
+   "a_e": true,
+   "gap": false,
+   "L8": {
+    "a_rL": false,
+    "a_g": false,
+    "c": true
+   },
+   "L6": {
+    "a_rL": false,
+    "a_g": false,
+    "c": true
+   },
+   "L6x12": {
+    "a_rL": false,
+    "c": true
+   }
+  },
+  "y3.0": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor) \u2014 (b) flagged (SSB channel unaffected)",
+   "class_L8": "(b)",
+   "class_L6": "(b)",
+   "b_flag": true,
+   "a_e": false,
+   "gap": false,
+   "L8": {
+    "a_rL": false,
+    "a_g": false,
+    "c": true
+   },
+   "L6": {
+    "a_rL": false,
+    "a_g": false,
+    "c": true
+   },
+   "L6x12": {
+    "a_rL": false,
+    "c": true
+   }
+  },
+  "M": {
+   "triggered": false,
+   "fall6": true,
+   "fall8": true,
+   "Vstable": true,
+   "absent": false
+  }
+ },
+ "S1_M": {
+  "y2.41": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor)",
+   "class_L8": "(c)",
+   "class_L6": "(c)",
+   "b_flag": false,
+   "a_e": true,
+   "gap": false,
+   "L8": {
+    "a_rL": false,
+    "a_g": false,
+    "c": true
+   },
+   "L6": {
+    "a_rL": false,
+    "a_g": false,
+    "c": true
+   },
+   "L6x12": {
+    "a_rL": false,
+    "c": true
+   }
+  },
+  "y3.0": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor) \u2014 (b) flagged (SSB channel unaffected)",
+   "class_L8": "(b)",
+   "class_L6": "(b)",
+   "b_flag": true,
+   "a_e": false,
+   "gap": false,
+   "L8": {
+    "a_rL": true,
+    "a_g": true,
+    "c": false
+   },
+   "L6": {
+    "a_rL": true,
+    "a_g": true,
+    "c": false
+   },
+   "L6x12": {
+    "a_rL": true,
+    "c": false
+   }
+  },
+  "M": {
+   "triggered": true,
+   "fall6": true,
+   "fall8": true,
+   "Vstable": true,
+   "absent": true
+  }
+ },
+ "S2": {
+  "y2.41": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor) \u2014 (b) flagged (SSB channel unaffected)",
+   "class_L8": "(b)",
+   "class_L6": "(b)",
+   "b_flag": true,
+   "a_e": false,
+   "gap": false,
+   "L8": {
+    "a_rL": true,
+    "a_g": false,
+    "c": false
+   },
+   "L6": {
+    "a_rL": true,
+    "a_g": false,
+    "c": false
+   },
+   "L6x12": {
+    "a_rL": true,
+    "c": false
+   }
+  },
+  "y3.0": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor) \u2014 (b) flagged (SSB channel unaffected)",
+   "class_L8": "(b)",
+   "class_L6": "(b)",
+   "b_flag": true,
+   "a_e": false,
+   "gap": false,
+   "L8": {
+    "a_rL": true,
+    "a_g": true,
+    "c": false
+   },
+   "L6": {
+    "a_rL": true,
+    "a_g": true,
+    "c": false
+   },
+   "L6x12": {
+    "a_rL": true,
+    "c": false
+   }
+  },
+  "M": {
+   "triggered": false,
+   "fall6": false,
+   "fall8": false,
+   "Vstable": false,
+   "absent": true
+  }
+ },
+ "null_free": {
+  "y2.41": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor)",
+   "class_L8": "UNDECIDED",
+   "class_L6": "UNDECIDED",
+   "b_flag": false,
+   "a_e": true,
+   "gap": false,
+   "L8": {
+    "a_rL": true,
+    "a_g": false,
+    "c": false
+   },
+   "L6": {
+    "a_rL": true,
+    "a_g": false,
+    "c": false
+   },
+   "L6x12": {
+    "a_rL": false,
+    "c": false
+   }
+  },
+  "y3.0": {
+   "verdict": "NO VERDICT at L \u2264 8 (gap channel: m_L(0) on 6\u00b3\u00d712 below the 0.3 floor)",
+   "class_L8": "UNDECIDED",
+   "class_L6": "UNDECIDED",
+   "b_flag": false,
+   "a_e": false,
+   "gap": false,
+   "L8": {
+    "a_rL": true,
+    "a_g": false,
+    "c": false
+   },
+   "L6": {
+    "a_rL": true,
+    "a_g": false,
+    "c": false
+   },
+   "L6x12": {
+    "a_rL": false,
+    "c": false
+   }
+  },
+  "M": {
+   "triggered": false,
+   "fall6": false,
+   "fall8": false,
+   "Vstable": true,
+   "absent": true
+  }
+ },
+ "S4": {
+  "rows": [
+   {
+    "h": 0.0,
+    "chi_L_over_free": 0.9030790088785441,
+    "GL_over_free": 0.9420095648858549,
+    "ok_chi": true,
+    "ok_g": true
+   },
+   {
+    "h": 0.1,
+    "chi_L_over_free": 0.9019309909425436,
+    "GL_over_free": 0.941217160737194,
+    "r_L": 0.9998661447849486,
+    "err": 0.005345620882939919,
+    "ok": true,
+    "ok_chi": true,
+    "ok_g": true
+   },
+   {
+    "h": 0.2,
+    "chi_L_over_free": 0.9016586754428192,
+    "GL_over_free": 0.9413350183615042,
+    "r_L": 1.0016411582293356,
+    "err": 0.005419606483139013,
+    "ok": true,
+    "ok_chi": true,
+    "ok_g": true
+   },
+   {
+    "h": 0.5,
+    "chi_L_over_free": 0.9037989818345328,
+    "GL_over_free": 0.9427546241466266,
+    "r_L": 0.9999059814619132,
+    "err": 0.0057513160736648115,
+    "ok": true,
+    "ok_chi": true,
+    "ok_g": true
+   },
+   {
+    "h": 1.0,
+    "chi_L_over_free": 0.9037997165693091,
+    "GL_over_free": 0.9426694223273053,
+    "r_L": 1.0099193243832634,
+    "err": 0.006145192366895385,
+    "ok": true,
+    "ok_chi": true,
+    "ok_g": true
+   },
+   {
+    "h": 2.0,
+    "chi_L_over_free": 0.9283015434483602,
+    "GL_over_free": 0.9585836101464649,
+    "r_L": 1.0202584651557496,
+    "err": 0.0060431327525933545,
+    "ok": true,
+    "ok_chi": true,
+    "ok_g": true
+   }
+  ],
+  "gate": [
+   {
+    "L": 6,
+    "Lt": 6,
+    "bc": "aaaa",
+    "h": 0.5,
+    "GL_p0": 0.9999999999999982,
+    "dmL": 0.0,
+    "mL_free": 0.4054651081075132
+   },
+   {
+    "L": 6,
+    "Lt": 6,
+    "bc": "aaaa",
+    "h": 1.0,
+    "GL_p0": 0.9999999999999982,
+    "dmL": 0.0,
+    "mL_free": 0.4054651081075132
+   },
+   {
+    "L": 6,
+    "Lt": 6,
+    "bc": "aaaa",
+    "h": 2.0,
+    "GL_p0": 0.9999999999999982,
+    "dmL": 0.0,
+    "mL_free": 0.4054651081075132
+   },
+   {
+    "L": 8,
+    "Lt": 8,
+    "bc": "aaaa",
+    "h": 0.5,
+    "GL_p0": 1.0000000000000007,
+    "dmL": 0.008764126408251416,
+    "mL_free": 0.8818537871937462
+   },
+   {
+    "L": 8,
+    "Lt": 8,
+    "bc": "aaaa",
+    "h": 1.0,
+    "GL_p0": 1.0000000000000007,
+    "dmL": 0.03356830648742393,
+    "mL_free": 0.9066579672729187
+   },
+   {
+    "L": 8,
+    "Lt": 8,
+    "bc": "aaaa",
+    "h": 2.0,
+    "GL_p0": 1.0000000000000007,
+    "dmL": 0.11340767652815398,
+    "mL_free": 0.9864973373136487
+   },
+   {
+    "L": 6,
+    "Lt": 12,
+    "bc": "aaaa",
+    "h": 0.5,
+    "GL_p0": 0.9998568674301831,
+    "dmL": 0.007191866331432095,
+    "mL_free": -0.24362992994806093
+   },
+   {
+    "L": 6,
+    "Lt": 12,
+    "bc": "aaaa",
+    "h": 1.0,
+    "GL_p0": 0.9994277154584063,
+    "dmL": 0.028536677907018526,
+    "mL_free": -0.2222851183724745
+   },
+   {
+    "L": 6,
+    "Lt": 12,
+    "bc": "aaaa",
+    "h": 2.0,
+    "GL_p0": 0.9977147852129232,
+    "dmL": 0.11067971035700694,
+    "mL_free": -0.1401420859224861
+   },
+   {
+    "L": 6,
+    "Lt": 6,
+    "bc": "pppa",
+    "h": 0.5,
+    "GL_p0": 0.9997907085055092,
+    "dmL": 0.0008663672654773136,
+    "mL_free": 0.21391046801918048
+   },
+   {
+    "L": 6,
+    "Lt": 6,
+    "bc": "pppa",
+    "h": 1.0,
+    "GL_p0": 0.9991633593273764,
+    "dmL": 0.0034470135040388927,
+    "mL_free": 0.21649111425774206
+   },
+   {
+    "L": 6,
+    "Lt": 6,
+    "bc": "pppa",
+    "h": 2.0,
+    "GL_p0": 0.9966618158913094,
+    "dmL": 0.013513720779373933,
+    "mL_free": 0.2265578215330771
+   }
+  ]
+ },
+ "selftest": {
+  "rc": 0,
+  "out": "selftest PASS"
+ }
+}
