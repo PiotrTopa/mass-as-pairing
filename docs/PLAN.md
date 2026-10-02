@@ -65,7 +65,7 @@ a claim is `claims/<ID>/`. The notebook claim numbers (`Cnnn`) are kept only in 
 | K2 | K2.5 | C₀ is a nodal pairing (no corner mass, also to O(h⁵)); C_χ is the taste-chiral Majorana mass (ε convention) | C147, C151 item 4, C152 items 1–3, C160 item 1 |
 | K2 | K2.6 | exact flavour-factorised bag expansion on 2³×4; 2+2 split positive in bag/conjugate-pair form | C148 items 1, 2, 4, 5 |
 | K3 | K3.1 | complete χ₁₀ does not grow with volume at five wedge points, L ≤ 8 | C104 |
-| K3 | K3.2 | complete χ₁₀ at P_c is free-like and suppressed (0.2–0.6 × free) | C130 |
+| K3 | K3.2 | complete χ₁₀ on the wedge family is free-like and suppressed (≤ 0.5 × free) | C130 |
 | K3 | K3.3 | pure-10 response irrelevant at P_c: R(8)/R(6) = 1.02(5), 0.97(2) (dense 8⁴) | C107 |
 | K3 | K3.4 | no SSB under the same-parity pairing source | C106 |
 | K3 | K3.5 | y = 0 LSM exit: bond crystal or gapless fermion, never the (10,3,1) channel | C131 |
