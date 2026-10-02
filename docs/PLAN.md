@@ -186,10 +186,30 @@ there are no custom kernels. The CPU path is the reference and the only one the 
   `data/MANIFEST.tsv` and `CITATION.cff`. Alternatives: a GitHub release asset of the tagged notebook (2 GB limit
   per file, no DOI), or Git LFS on the companion repository (quota, no DOI). Nothing is uploaded by this lane.
 
-## 7. Audit (filled in at the end)
-
-See §audit below.
-
 ## audit
 
-(pending)
+State at the end of the port (all from a fresh clone of this repository with a fresh virtual environment,
+`pip install -e '.[dev]'`, numpy 2.5.3, scipy 1.18.1, single-threaded BLAS):
+
+| item | result |
+|---|---|
+| claims | 52/52 PASS (`claims/run_all.py -j 5`; 41 K claims, 11 instrument claims; longest check K5.2, 9 min); table `claims/STATUS.md` |
+| tests | `pytest`: 51 passed, 1 skipped (the live notebook comparison of the algebra group needs a notebook checkout; its frozen comparison runs) |
+| equivalence, chains | 11 chain cases (ε model noise/exact/Hasenbusch, wedge noise/exact/Hasenbusch, per-link model, nodal source, N1 exact/noise, flavour-selective with Pfaffian sign): every common series and the final configuration bit-identical to the notebook runners |
+| equivalence, components | 167 arrays (operators, patterns, projectors, partial fractions, actions, forces, Lanczos, every measure dense and stochastic, Pfaffians, symmetry classification, corner blocks): bit-identical |
+| equivalence, analyses | stage-1 / stage-1b rows, verdicts and controls bit-identical; α readout ≤ 3.4 × 10⁻¹³; T3a verdicts and tables bit-identical; calibration ≤ 1e-12; K3 ensembles ≤ 1e-12; algebra 100 arrays bit-identical; free baselines ≤ 1e-12 |
+| re-measurement | dense N1 measure of stored stage-0 (4⁴) and stage-1 (6⁴) configurations reproduces the stored series to ≤ 1e-12 (relative, absolute floor 1e-18); stored final configurations reproduce their σ and link-field observables |
+| RESULTS.md numbers | 111 numbers, each found in the output of the check.py tagged on its line (`scripts/trace_results.py`, 0 misses) |
+| determinism | `make results` and `make figures` from the fresh clone reproduce the committed tables and figures byte for byte; every Monte Carlo check regenerates a prefix of its frozen run bit-identically |
+| lint | `ruff check` and `black --check` clean on masspairing, scripts, tests, claims |
+| data size | committed data 41 MB in 394 npz/json files, every file < 5 MB; no configuration set beyond the few listed in the manifest |
+| leaks | no `/home` paths, user names, hostnames, IP addresses, e-mail addresses, credentials or infrastructure names in any committed text file or in the metadata of any committed npz; the author name appears only in LICENSE, CITATION.cff and pyproject.toml. Raw-archive paths in the manifest and in `scripts/derive_*.py` keep the archive's directory names (they locate the raw files) |
+| secrets | none |
+
+Notebook issues found during the port (the clean claims quote the current check outputs):
+- At the notebook head, C193 and C194 fail live: four stage-1 chain files were later extended in place, so their checks
+  no longer reproduce the frozen stage-1 rows; the clean port reads the pre-extension copies and reproduces the certified
+  outputs bit for bit. C195–C199 still pass there, with some printed numbers taken from the extended files.
+- Claim texts differing from their own check outputs (minor): C022 (164 992, not 172 648, monomials), C041, C043, C050,
+  C060, C104 (χ₁₀ < E₁₀ not true at one 4⁴ point, never asserted), C107 (the ε-control growth on (4,6) is 1.9σ as a ratio),
+  C130 (worst ratio 0.54; range 0.08–0.47), C131, C140 (sabotage numbers), C161, C190, C194, C196, C197, C201, C202.

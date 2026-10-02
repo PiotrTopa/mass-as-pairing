@@ -133,7 +133,7 @@ h = 1 and 2 — and nowhere does it go gapless or re-Higgs.
 
 **Numbers.**
 - Symmetry zeros: 4⁴ aaaa group 384, 32 elements fix C_χ, 16 of them flip the light Majorana mass; group averages of
-  every light scalar mass < 10⁻¹² [K5.2].
+  every light scalar mass ≤ 5.1 × 10⁻¹⁸ (zero to rounding) [K5.2].
 - Free-theory gate: the light momentum readout GL_p0 = 1 on every all-antiperiodic box at every h; the heavy one falls,
   GR_p0(8⁴) = 0.9279 / 0.4457 at h = 0.5 / 2 [K5.1].
 - Stage 1b at y = 3.0 (new samples): light pair-channel cosh-mass ratio r_L^cosh(8⁴) = 0.976(2) (h = 1), 0.920(2) (h = 2);

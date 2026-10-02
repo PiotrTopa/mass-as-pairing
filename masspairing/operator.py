@@ -92,7 +92,9 @@ class DoubletOperator:
         self._merged = None
         self._csel = None
         if self.selective:
-            self.C = source_pattern(lat) if isinstance(pattern, str) and pattern == "c0" else source_matrix(lat, pattern)
+            self.C = (
+                source_pattern(lat) if isinstance(pattern, str) and pattern == "c0" else source_matrix(lat, pattern)
+            )
             self.p_re = self.mask[0::2].copy()
             self.p_im = self.mask[1::2].copy()
         elif self.h:
