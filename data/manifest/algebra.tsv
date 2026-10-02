@@ -1,0 +1,5 @@
+kind	path	md5	bytes	produced_by	used_by
+raw	results/xi_scan/F8_P3_eps/L4_y2.41_k-0.01_g0_g60.npz	2be2316f68fac03c08d1efe8d7daef01	330842	chain run (archive)	scripts/derive_algebra.py
+raw	results/xi_scan/F8_P3_eps/L6_y2.41_k-0.01_g0_g60.npz	2e9ff1f5a67c1e3be425be9a482377e0	598454	chain run (archive)	scripts/derive_algebra.py
+derived	data/derived/algebra/eps_L4_y2.41_k-0.01_final.npz	-	-	scripts/derive_algebra.py	K2.4,K2.5
+derived	data/derived/algebra/eps_L6_y2.41_k-0.01_final.npz	-	-	scripts/derive_algebra.py	K2.5

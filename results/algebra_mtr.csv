@@ -1,0 +1,15 @@
+cluster,ensemble,dimL_sym,dimL_anti,T_plus,T_minus,sign_free_class
+2-site,eps V>0 (He et al.),10,6,True,True,Majorana
+2-site,eps V<0,10,6,True,True,Majorana
+2-site,Sym2 scheme A (pairing),0,0,False,False,none
+2-site,Sym2 scheme B (density + exchange),0,0,False,False,none
+2-site,Sym2 scheme C (density + SU(4) spin),0,0,False,False,none
+2-site,eps + Sym2 scheme A,0,0,False,False,none
+2-site,eps + flavour Zeeman (control),5,1,True,False,none
+2x2,eps V>0 (He et al.),10,6,True,True,Majorana
+2x2,eps V<0,10,6,True,True,Majorana
+2x2,Sym2 scheme A (pairing),0,0,False,False,none
+2x2,Sym2 scheme B (density + exchange),0,0,False,False,none
+2x2,Sym2 scheme C (density + SU(4) spin),0,0,False,False,none
+2x2,eps + Sym2 scheme A,0,0,False,False,none
+2x2,eps + flavour Zeeman (control),5,1,True,False,none

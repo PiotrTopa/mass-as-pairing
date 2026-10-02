@@ -1,0 +1,31 @@
+{
+ "lattice": "4^4, periodic space, antiperiodic time",
+ "class": "span{1, Gamma_a} (x) R^{V x V}",
+ "rows": [
+  {
+   "pattern": "1 (x) C_chi (flavour-blind chiral mass)",
+   "relative_distance": 0.0,
+   "exact": 0.0
+  },
+  {
+   "pattern": "1 (x) C0 (flavour-blind nodal source)",
+   "relative_distance": 0.0,
+   "exact": 0.0
+  },
+  {
+   "pattern": "C0 (x) diag(0,0,0,1) (1-of-4 split)",
+   "relative_distance": 0.866025403784,
+   "exact": 0.866025403784
+  },
+  {
+   "pattern": "C_chi (x) diag(0,0,1,1) (2+2 split)",
+   "relative_distance": 0.707106781187,
+   "exact": 0.707106781187
+  },
+  {
+   "pattern": "C_chi (x) diag(0.2,0.5,1,1.3)",
+   "relative_distance": 0.494940847933,
+   "exact": 0.494940847933
+  }
+ ]
+}
