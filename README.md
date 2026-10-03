@@ -41,8 +41,15 @@ make results    # tables in results/
 make figures    # figures in figures/
 ```
 
-All of these run from the committed derived data. Rebuilding the derived data needs the raw chain archive
-(`make derived MASSPAIRING_ARCHIVE=/path/to/archive`; files and md5 sums in [data/MANIFEST.tsv](data/MANIFEST.tsv)).
+All of these run from the committed derived data. Rebuilding the derived data needs the raw chain archive, deposited
+on Zenodo (DOI 10.5281/zenodo.XXXXXXX, four bundles, about 0.5 GB; files, md5 sums and bundles in
+[data/MANIFEST.tsv](data/MANIFEST.tsv)):
+
+```
+python scripts/fetch_data.py --out archive            # download, check md5 sums, unpack
+make derived MASSPAIRING_ARCHIVE=archive
+```
+
 New chains: `python scripts/run_chain.py --help`.
 
 ## Layout
@@ -51,7 +58,7 @@ New chains: `python scripts/run_chain.py --help`.
 masspairing/        the package: lattice, patterns, link fields, operator, action, HMC, measures, analysis, algebra
 claims/<ID>/        claim.md + check.py per certified claim; claims/run_all.py runs them all
 data/derived/       derived data (time series without configurations, frozen scans); data/configs/ stored configurations
-data/MANIFEST.tsv   every data file: path, md5, size, producer, users (raw archive files included)
+data/MANIFEST.tsv   every data file: path, md5, size, producer, users; raw archive files with their Zenodo bundle
 results/  figures/  final tables and figures, one script each in scripts/
 tests/              unit tests, equivalence tests against the notebook implementation (frozen references)
 docs/PLAN.md        layout, claim identifiers and their notebook provenance, data strategy, audit
@@ -66,4 +73,4 @@ The research history (all runs, superseded analyses, exploratory claims) is arch
 
 ## How to cite
 
-See [CITATION.cff](CITATION.cff) (paper DOI to be added). License: MIT.
+See [CITATION.cff](CITATION.cff) (paper DOI to be added). License: MIT (code); the data archive is CC BY 4.0.

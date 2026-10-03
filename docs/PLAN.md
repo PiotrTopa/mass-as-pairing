@@ -36,7 +36,7 @@ data/derived/        small derived data (time series without configurations, fro
 data/configs/        a few stored configurations for re-measurement tests
 results/             final tables (CSV/JSON), one deterministic script each
 figures/             figures, one deterministic script each
-scripts/             run_chain.py (the chain runner), make_derived.py, table_*.py, fig_*.py
+scripts/             run_chain.py (the chain runner), derive_*.py, table_*.py, fig_*.py, fetch_data.py
 tests/               pytest: unit tests and new-vs-notebook equivalence tests (frozen references in tests/reference/)
 docs/PLAN.md         this file
 ```
@@ -44,8 +44,8 @@ docs/PLAN.md         this file
 ## 2. Claim identifiers
 
 Scheme: `K<n>.<m>` is the m-th certified statement supporting paper claim K<n>; `I.<m>` is an instrument
-(method) validation the K claims rest on; `M.1` is the closed moonshot null. Identifiers are stable: a claim
-that is later withdrawn keeps its number with status "withdrawn"; new claims get new numbers. The directory of
+(method) validation the K claims rest on; `M.1` is the closed moonshot null. Identifiers are stable once the
+paper cites them: a claim that is later withdrawn keeps its number with status "withdrawn"; new claims get new numbers. The directory of
 a claim is `claims/<ID>/`. The notebook claim numbers (`Cnnn`) are kept only in this table and in the
 `Provenance` line of each claim.md.
 
@@ -85,10 +85,9 @@ a claim is `claims/<ID>/`. The notebook claim numbers (`Cnnn`) are kept only in 
 | K6 | K6.1 | no frequency winding in the sign-free class; quantisation scale above the bandwidth | C180, C181 |
 | K6 | K6.2 | the odd-part exponent α: validation; SYM/SMG separated per configuration | C182, C183 |
 | K6 | K6.3 | α_L ensemble readout: saturated Luttinger zero in SMG at every h | C196 |
-| K7 | K7.1 | finite-size-scaling crossing of ξ₂/L at P_c from L = 6/8 | C083 |
-| K7 | K7.2 | no first-order signature at L ≤ 8 (pilot set, 39 chains) | C051 |
-| K7 | K7.3 | 8⁴ three-start hysteresis, inner pair, pooled P_c (2000 trajectories per start) | C171, C192 |
-| K7 | K7.4 | ξ(y) at L ≤ 12 cannot separate walking from a power law | C082 |
+| K7 | K7.1 | no first-order signature at L ≤ 8 (pilot set, 39 chains) | C051 |
+| K7 | K7.2 | 8⁴ three-start hysteresis, inner pair, pooled P_c (2000 trajectories per start) | C171, C192 |
+| K7 | K7.3 | ξ(y) at L ≤ 12 cannot separate walking from a power law | C082 |
 | K8 | K8.1 | anti-seesaw tier 1: partner-mass lemma; ε/σ collapse; light pair-channel gap rises; quench | C199 items 1, 3 |
 | K8 | K8.2 | tier 2 as pre-registered: rise monotone, no SSB, V-stable; not a power law (crossover) | C202 |
 | M | M.1 | moonshot trigger not met: the light gap rises at P_c (no critical seesaw at L ≤ 8) | C194 item 4, C202 (C4 alert) |
@@ -117,6 +116,8 @@ Stays in the notebook (cited once, in README, as the provenance archive):
 - **Superseded instruments and estimators**: C071/C072 (bond-product estimator, one unthermalised row), C103 (the
   identification of that estimator — the clean package carries only the complete estimator), C105 (stochastic 8⁴
   linear response, superseded by the dense C107), C148 item 3 (struck).
+- **Fixed-prefix crossing table**: C083 (ξ₂/L at P_c over fixed chain prefixes; the crossing is carried by the complete
+  chains, K7.1, and the pooled replicas, K7.2).
 - **Notebook-code regression facts**: C121 (fit-fallback bit identity), C122 (checkpoint resume), C143/C164
   (default-path bit identity of the notebook runners), C144 (Lanczos cap flag). Replaced here by the equivalence
   tests of §5.
@@ -178,13 +179,17 @@ there are no custom kernels. The CPU path is the reference and the only one the 
 - **Derived data** (committed, each file < 5 MB): per chain, the time series the checks read (no configurations,
   no unused keys); frozen outputs of long computations (free baselines at 8⁴, α-scan block means, symmetry scans);
   a handful of stored configurations for the re-measurement tests. Produced from the raw files by
-  `scripts/make_derived.py` (needs the archive) and listed in the manifest with md5.
+  `scripts/derive_*.py` (`make derived`, needs the archive) and listed in the manifest with md5.
 - Every check.py and every figure runs from the derived data alone. Where a check needs a raw configuration
   set beyond the committed subset, it states so and verifies the frozen derived product instead.
-- **Archive proposal (decision for the user):** deposit the raw chain files (the `results/` tree of the notebook
-  at `3c4a02c`, ≈ 650 MB, as one tarball per data set) on Zenodo with a DOI, and record that DOI in
-  `data/MANIFEST.tsv` and `CITATION.cff`. Alternatives: a GitHub release asset of the tagged notebook (2 GB limit
-  per file, no DOI), or Git LFS on the companion repository (quota, no DOI). Nothing is uploaded by this lane.
+- **Archive:** the 327 raw files (594 MB) are deposited on Zenodo (data licence CC BY 4.0) as four bundles
+  (`masspairing.data.ARCHIVE_BUNDLES`: ε model, wedge, nodal source, N1), each a tar.gz of archive-relative paths
+  under `results/`. The DOI is `masspairing.data.DATA_DOI`, set once by `scripts/set_data_doi.py`, which also writes
+  it into README.md, CITATION.cff and the `archive` column of `data/MANIFEST.tsv`. `scripts/fetch_data.py`
+  downloads the bundles, checks them against the md5 sums of the record and every unpacked file against the
+  manifest. In 28 files of the N1 bundle (α re-scan and quench outputs: arrays `src_file`, `chain`) the deposit
+  holds the archive-relative source path where the run had stored an absolute one; the manifest md5 sums are those
+  of the deposited files.
 
 ## audit
 
@@ -193,16 +198,16 @@ State at the end of the port (all from a fresh clone of this repository with a f
 
 | item | result |
 |---|---|
-| claims | 52/52 PASS (`claims/run_all.py -j 5`; 41 K claims, 11 instrument claims; longest check K5.2, 9 min); table `claims/STATUS.md` |
+| claims | 51/51 PASS (`claims/run_all.py -j 3`; 40 K claims, 11 instrument claims; longest check K5.2, 9 min); table `claims/STATUS.md` |
 | tests | `pytest`: 51 passed, 1 skipped (the live notebook comparison of the algebra group needs a notebook checkout; its frozen comparison runs) |
 | equivalence, chains | 11 chain cases (ε model noise/exact/Hasenbusch, wedge noise/exact/Hasenbusch, per-link model, nodal source, N1 exact/noise, flavour-selective with Pfaffian sign): every common series and the final configuration bit-identical to the notebook runners |
 | equivalence, components | 167 arrays (operators, patterns, projectors, partial fractions, actions, forces, Lanczos, every measure dense and stochastic, Pfaffians, symmetry classification, corner blocks): bit-identical |
 | equivalence, analyses | stage-1 / stage-1b rows, verdicts and controls bit-identical; α readout ≤ 3.4 × 10⁻¹³; T3a verdicts and tables bit-identical; calibration ≤ 1e-12; K3 ensembles ≤ 1e-12; algebra 100 arrays bit-identical; free baselines ≤ 1e-12 |
 | re-measurement | dense N1 measure of stored stage-0 (4⁴) and stage-1 (6⁴) configurations reproduces the stored series to ≤ 1e-12 (relative, absolute floor 1e-18); stored final configurations reproduce their σ and link-field observables |
-| RESULTS.md numbers | 111 numbers, each found in the output of the check.py tagged on its line (`scripts/trace_results.py`, 0 misses) |
+| RESULTS.md numbers | 113 numbers, each found in the output of the check.py tagged on its line (`scripts/trace_results.py`, 0 misses) |
 | determinism | `make results` and `make figures` from the fresh clone reproduce the committed tables and figures byte for byte; every Monte Carlo check regenerates a prefix of its frozen run bit-identically |
 | lint | `ruff check` and `black --check` clean on masspairing, scripts, tests, claims |
-| data size | committed data 41 MB in 394 npz/json files, every file < 5 MB; no configuration set beyond the few listed in the manifest |
+| data size | committed data 40 MB in 395 npz/json files, every file < 5 MB; no configuration set beyond the few listed in the manifest |
 | leaks | no `/home` paths, user names, hostnames, IP addresses, e-mail addresses, credentials or infrastructure names in any committed text file or in the metadata of any committed npz; the author name appears only in LICENSE, CITATION.cff and pyproject.toml. Raw-archive paths in the manifest and in `scripts/derive_*.py` keep the archive's directory names (they locate the raw files) |
 | secrets | none |
 

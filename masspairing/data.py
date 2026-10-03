@@ -5,7 +5,9 @@
   file (path in the raw archive), its md5 and size.
 * ``data/configs/`` -- a few stored configurations for re-measurement tests.
 * the raw archive -- the chain files with configurations, not committed; ``MASSPAIRING_ARCHIVE`` points at its root
-  (the directory that contains ``results/``). Only ``scripts/derive_*.py`` and tests marked ``archive`` need it.
+  (the directory that contains ``results/``). Only ``scripts/derive_*.py`` and tests marked ``archive`` need it. It is
+  deposited on Zenodo under ``DATA_DOI`` as the bundles of ``ARCHIVE_BUNDLES``; ``scripts/fetch_data.py`` downloads,
+  verifies and unpacks it.
 """
 
 from __future__ import annotations
@@ -14,6 +16,7 @@ import hashlib
 import json
 import os
 import pathlib
+import re
 
 import numpy as np
 
@@ -23,6 +26,27 @@ DERIVED = DATA / "derived"
 CONFIGS = DATA / "configs"
 RESULTS = ROOT / "results"
 FIGURES = ROOT / "figures"
+
+# DOI of the raw chain archive on Zenodo. The placeholder is replaced everywhere (here, README.md, CITATION.cff,
+# data/MANIFEST.tsv) by `python scripts/set_data_doi.py <doi>`.
+DATA_DOI_PLACEHOLDER = "10.5281/zenodo.XXXXXXX"
+DATA_DOI = "10.5281/zenodo.XXXXXXX"
+
+# the bundles of the deposit: name -> archive paths it holds (regular expression on the archive-relative path)
+ARCHIVE_BUNDLES = {
+    "mass-as-pairing-data_eps-model.tar.gz": r"results/xi_scan/(F_|F2_|F5_|F12_|L6_k|L8_k)"
+    r"|results/(calib|hmc_validation|laneE|laneK2)/",
+    "mass-as-pairing-data_wedge.tar.gz": r"results/xi_scan/(F8_|F9_)|results/(laneW2|laneR)/",
+    "mass-as-pairing-data_nodal-source.tar.gz": r"results/xi_scan/S_prod/|results/laneS/",
+    "mass-as-pairing-data_n1.tar.gz": r"results/xi_scan/K_N1_|results/(laneK5S1A|laneK5S1bA|laneK4Z|laneK1)/",
+}
+
+
+def archive_bundle(rel):
+    """The bundle of the deposit that holds the archive file ``rel`` (exactly one)."""
+    hits = [b for b, rx in ARCHIVE_BUNDLES.items() if re.match(rx, rel)]
+    assert len(hits) == 1, (rel, hits)
+    return hits[0]
 
 
 def archive_root():
