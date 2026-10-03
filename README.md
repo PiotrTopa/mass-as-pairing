@@ -42,7 +42,7 @@ make figures    # figures in figures/
 ```
 
 All of these run from the committed derived data. Rebuilding the derived data needs the raw chain archive, deposited
-on Zenodo (DOI 10.5281/zenodo.XXXXXXX, four bundles, about 0.5 GB; files, md5 sums and bundles in
+on Zenodo (DOI 10.5281/zenodo.23117210, four bundles, about 0.5 GB; files, md5 sums and bundles in
 [data/MANIFEST.tsv](data/MANIFEST.tsv)):
 
 ```

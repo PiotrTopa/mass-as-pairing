@@ -30,7 +30,7 @@ FIGURES = ROOT / "figures"
 # DOI of the raw chain archive on Zenodo. The placeholder is replaced everywhere (here, README.md, CITATION.cff,
 # data/MANIFEST.tsv) by `python scripts/set_data_doi.py <doi>`.
 DATA_DOI_PLACEHOLDER = "10.5281/zenodo.XXXXXXX"
-DATA_DOI = "10.5281/zenodo.XXXXXXX"
+DATA_DOI = "10.5281/zenodo.23117210"
 
 # the bundles of the deposit: name -> archive paths it holds (regular expression on the archive-relative path)
 ARCHIVE_BUNDLES = {

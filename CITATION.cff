@@ -18,5 +18,5 @@ preferred-citation:
   year: 2026
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.XXXXXXX"
+    value: "10.5281/zenodo.23117210"
     description: "Raw chain archive (Zenodo); set with scripts/set_data_doi.py"
