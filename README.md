@@ -61,7 +61,6 @@ data/derived/       derived data (time series without configurations, frozen sca
 data/MANIFEST.tsv   every data file: path, md5, size, producer, users; raw archive files with their Zenodo bundle
 results/  figures/  final tables and figures, one script each in scripts/
 tests/              unit tests, equivalence tests against the notebook implementation (frozen references)
-docs/PLAN.md        layout, claim identifiers and their notebook provenance, data strategy, audit
 ```
 
 Claim identifiers: `K<n>.<m>` supports paper claim K<n>; `I.<m>` certifies an instrument; `M.1` is the moonshot null.

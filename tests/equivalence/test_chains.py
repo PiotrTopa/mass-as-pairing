@@ -24,7 +24,7 @@ spec.loader.exec_module(run_chain)
 TOL = {}  # case -> max relative difference allowed (0.0 = bit identical)
 
 # series of the notebook's bond-product estimator, which the clean package does not carry (superseded by the
-# complete 10-channel estimator, see docs/PLAN.md section 3)
+# complete 10-channel estimator)
 DROPPED = {
     "ts_phi10_sq",
     "ts_phi10bar_sq",
