@@ -182,19 +182,19 @@ at P_c. The pre-registered rule returns "continuous (consistent with, L ≤ 8)".
 "walking": ξ(y) at L ≤ 12 cannot separate walking from a power law.
 
 **Numbers.**
-- Hysteresis: largest of 15 start-pair pulls 2.66σ (6⁴) [K7.2], 2.42σ (8⁴, 2000 trajectories per start) [K7.3].
-- Energy-cumulant ratio (2/3 − V_e)₈/₆ = 0.28(2) (1/V law: 0.32) [K7.2].
-- Pooled P_c: γ/ν_eff = 1.58(16), η_eff = +0.42(16), 16σ from the first-order value [K7.3].
-- ξ₂,stag/L at y = 2.41: 0.391(14) (6⁴) / 0.401(17) (8⁴) [K7.1]; pooled 0.373(7) / 0.399(9) [K7.3].
-- Walking vs power law: Δχ² ≤ 1.2 at L_max ≤ 12 with 7 points at 1 % [K7.4].
+- Hysteresis: largest of 15 start-pair pulls 2.66σ (6⁴) [K7.1], 2.42σ (8⁴, 2000 trajectories per start) [K7.2].
+- Energy-cumulant ratio (2/3 − V_e)₈/₆ = 0.28(2) (1/V law: 0.32) [K7.1].
+- Pooled P_c: γ/ν_eff = 1.58(16), η_eff = +0.42(16), 16σ from the first-order value [K7.2].
+- ξ₂,stag/L at y = 2.41: 0.377(10) (6⁴) / 0.415(19) (8⁴), Δ = +1.8σ [K7.1]; pooled 0.373(7) / 0.399(9), Δ = +2.4σ [K7.2].
+- Walking vs power law: Δχ² ≤ 1.2 at L_max ≤ 12 with 7 points at 1 % [K7.3].
 
-**Links.** `claims/K7.1/` … `claims/K7.4/`; data `data/derived/k7/`; tables `results/K7_fss.csv`,
+**Links.** `claims/K7.1/` … `claims/K7.3/`; data `data/derived/k7/`; tables `results/K7_fss.csv`,
 `results/K7_hysteresis.csv`, `results/K7_verdict.json`, `results/K7_discrimination.csv`; figure
 [`figures/k7_xi_over_L.pdf`](figures/k7_xi_over_L.pdf) (`scripts/fig_k7_xi_over_L.py`).
 
-**Caveats.** Two volumes. The crossing sits slightly above y = 2.41 on the pooled data (+2.4σ) [K7.3]. The 8⁴ rule first
+**Caveats.** Two volumes. The crossing sits slightly above y = 2.41 on the pooled data (+2.4σ) [K7.2]. The 8⁴ rule first
 returned UNDECIDED at 1000 trajectories per start (chain scoring); the starts were extended to 2000 and the unchanged rule
-applied [K7.3].
+applied [K7.2].
 
 ## K8. Anti-seesaw at the critical point
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """figures/k7_xi_over_L.{pdf,png}: xi_2,stag/L and S(pi) against y on the kappa = -0.01 line at L = 6 and 8
-(claims K7.2, K7.3; first 100 trajectories cut, replicas combined; open markers: not scored). The dashed line marks
+(claims K7.1, K7.2; first 100 trajectories cut, replicas combined; open markers: not scored). The dashed line marks
 P_c, y = 2.41."""
 
 import pathlib

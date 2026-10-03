@@ -1,5 +1,5 @@
 {
- "K7.2": {
+ "K7.1": {
   "verdict": "CONTINUOUS (consistent with, L ≤ 8)",
   "verdict_prereg_letter": "CONTINUOUS",
   "crossing_persists": true,
@@ -156,7 +156,7 @@
    "exclusion_pass": true
   }
  },
- "K7.3": {
+ "K7.2": {
   "verdict": "CONTINUOUS (consistent with, L ≤ 8), sharpened",
   "crossing_persists": true,
   "crossing": {

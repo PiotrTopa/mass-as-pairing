@@ -16,7 +16,7 @@ import pytest
 
 from masspairing.analysis import t3a
 from masspairing.analysis.calibration import point_summary
-from masspairing.analysis.fss import K71_PREFIX, discrimination_table, ratio_row
+from masspairing.analysis.fss import discrimination_table
 from masspairing.data import derived, load_chain
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -78,20 +78,8 @@ def test_t3a_sharpened(analyses):
     assert compare(t3a.jsonable(S["labels"]), ref("t3a_sharpened_labels.json")["chains"]) == 0.0
 
 
-def test_k71_table():
-    rows = {(r["L"], r["y"]): r for r in ref("k71_table.json") if r["L"] in (6, 8)}
-    recs = [r for r in t3a.load_records("pilot") if r["dir"] in ("F_L6_k-0.01", "F_L8_k-0.01")]
-    assert len(recs) == len(rows) == 12
-    for r in recs:
-        n = K71_PREFIX[r["L"]][r["y"]]
-        new = ratio_row(r["L"], r["Sigma_stag"][:n], r["S_pi"][:n], r["S_pi_pmin"][:n])
-        old = rows[(r["L"], r["y"])]
-        for k in ("n", "tau", "ok", "R4", "eR4", "xiL", "exiL", "mabs", "emabs"):
-            assert new[k] == old[k], (r["L"], r["y"], k)
-
-
-def test_k74_discrimination():
-    new, old = discrimination_table(), ref("k74_discrimination.json")
+def test_k73_discrimination():
+    new, old = discrimination_table(), ref("k73_discrimination.json")
     assert len(new) == len(old)
     for a, b in zip(new, old, strict=True):
         compare(a, b)

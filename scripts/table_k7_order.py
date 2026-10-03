@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Order of the transition at P_c (claims K7.2, K7.3):
+"""Order of the transition at P_c (claims K7.1, K7.2):
 
 results/K7_hysteresis.csv    the start chains at P_c (6^4 and 8^4) and the pilot 8^4 P_c chain, after the cut
-results/K7_verdict.json      the signals, controls and verdicts of the pilot set (K7.2) and the full set (K7.3)
+results/K7_verdict.json      the signals, controls and verdicts of the pilot set (K7.1) and the full set (K7.2)
 results/K7_phase_labels.csv  the phase label of each of the 44 chains (archive path; configuration array sigma_final)
 """
 
@@ -54,7 +54,7 @@ def main():
 
     vp, vs = P["verdict"], S["verdict"]
     out = {
-        "K7.2": summary(
+        "K7.1": summary(
             vp,
             (
                 "verdict",
@@ -79,7 +79,7 @@ def main():
                 "controls",
             ),
         ),
-        "K7.3": summary(
+        "K7.2": summary(
             vs,
             (
                 "verdict",

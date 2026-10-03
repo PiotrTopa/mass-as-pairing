@@ -24,7 +24,7 @@ on the stage-1b rows.
 
 **Pre-registration and deviations.** The trigger was fixed before the stage-1 data were read (notebook commits 42417f8,
 eaa3692), the fall alert before any stage-1b trajectory (notebook commit 27ea0ee). The trigger presupposed that K7 is
-not first order at L ≤ 8 (K7.2, K7.3).
+not first order at L ≤ 8 (K7.1, K7.2).
 
 **Controls.** S1_M (r_L := 1/(1 + 3h) at y = 2.41 only, g := free) → M triggered. Free-null injection → M not triggered.
 S1′ (injected seesaw on the stage-1b P_c rows) → the fall alert fires.

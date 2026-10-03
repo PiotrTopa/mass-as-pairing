@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-"""Derived data of claims I.1, I.2, I.3 and K7.1-K7.4 (group k7).
+"""Derived data of claims I.1, I.2, I.3, K7.1 and K7.2 (group k7).
 
     python scripts/derive_k7.py archive     # time series of the stored chains (needs MASSPAIRING_ARCHIVE)
     python scripts/derive_k7.py mc          # the Monte Carlo comparisons of I.1 / I.2 (clean package, ~25 min CPU)
     python scripts/derive_k7.py             # both
 
 archive -> data/derived/k7/
-  t3a/<dir>/<file>.npz     the 44 epsilon-model chains of K7.1-K7.3 (series of masspairing.analysis.t3a.SERIES;
-                           ts_Sigma_stag in addition on the kappa = -0.01 grid chains used by K7.1)
+  t3a/<dir>/<file>.npz     the 44 epsilon-model chains of K7.1 and K7.2 (series of masspairing.analysis.t3a.SERIES)
   calib/<set>/<file>.npz   the chains of the calibration I.3 (every scalar and fermion series of the chain summary)
   c060/{plain,hasenbusch}.npz   stored 4^4 chains at P_c, plain and Hasenbusch/multiple-time-scale RHMC (I.2 part D)
 mc -> data/derived/k7/mc/<name>.npz: series of the exact-determinant Metropolis reference and of the RHMC runs it is
@@ -58,7 +57,6 @@ T3A_KEYS = [
     "ts_ferm_flag",
     "ts_accepted",
 ]
-K71_DIRS = ("F_L6_k-0.01", "F_L8_k-0.01")  # also ts_Sigma_stag (vector) for K7.1
 # calibration chains, in the order in which a later set replaces a point (L, kappa, y) of an earlier one
 CALIB_SETS = [
     "results/calib/L8_k0.2",
@@ -101,7 +99,6 @@ def derive_archive():
             f = pathlib.Path(f)
             rel = f.relative_to(root).as_posix()
             z = np.load(f, allow_pickle=True)
-            keys = T3A_KEYS + (["ts_Sigma_stag"] if d in K71_DIRS else [])
             extra = dict(
                 tag=f"{d}/{f.name}",
                 dir=d,
@@ -109,7 +106,7 @@ def derive_archive():
                 config_shape=list(z["sigma_final"].shape),
             )
             dst = OUT / "t3a" / d / f.name
-            strip_chain(f, dst, keys=keys, extra_meta=extra, rel=rel)
+            strip_chain(f, dst, keys=T3A_KEYS, extra_meta=extra, rel=rel)
             raw.append(rel)
             out.append(dst)
     points = {}

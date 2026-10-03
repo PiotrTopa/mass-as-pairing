@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""results/K7_discrimination.csv: expected Delta chi^2 of walking vs power law for xi(y) (claim K7.4)."""
+"""results/K7_discrimination.csv: expected Delta chi^2 of walking vs power law for xi(y) (claim K7.3)."""
 
 import csv
 import math

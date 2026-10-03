@@ -7,8 +7,7 @@ the notebook root itself).
   t3a_pilot_{verdict,fss,labels}.json      notebook frozen outputs of the pilot-set analysis (39 chains)
   t3a_sharpened_{verdict,fss,labels}.json  notebook frozen outputs of the 44-chain analysis (2000-trajectory starts)
   t3a_sabotage.json                        notebook frozen sabotage results of the 44-chain analysis
-  k71_table.json                           notebook frozen ratio table of the kappa = -0.01 prefixes
-  k74_discrimination.json                  notebook frozen walking / power-law mock table
+  k73_discrimination.json                  notebook frozen walking / power-law mock table
   calib_points.json                        notebook chain summary (scripts/analyse.py) of every calibration chain
   mc_short.npz                             short runs of the notebook brute-force Metropolis and RHMC codes
 """
@@ -39,8 +38,7 @@ def copy_frozen():
         "results/laneK2/c192/fss_table.json": "t3a_sharpened_fss.json",
         "results/laneK2/c192/phase_labels_new.json": "t3a_sharpened_labels.json",
         "results/laneK2/c192/sabotage.json": "t3a_sabotage.json",
-        "results/laneX/c083/fss_table.json": "k71_table.json",
-        "results/laneX/c082/discriminate_mock.json": "k74_discrimination.json",
+        "results/laneX/c082/discriminate_mock.json": "k73_discrimination.json",
     }
     for src, dst in pairs.items():
         shutil.copy(NB / src, OUT / dst)

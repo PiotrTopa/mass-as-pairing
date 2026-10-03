@@ -1,6 +1,6 @@
 """Order of the transition at P_c = (2.41, -0.01) from the epsilon-model chains at L = 6 and 8.
 
-The estimators and the decision rule of claims K7.2 (pilot set, 39 chains) and K7.3 (pilot set + the 8^4 three-start
+The estimators and the decision rule of claims K7.1 (pilot set, 39 chains) and K7.2 (pilot set + the 8^4 three-start
 set and the inner pair at L = 8). The criteria were fixed before the data were read; the code below implements them
 as applied.
 
@@ -421,7 +421,7 @@ def sort_records(recs):
     return sorted(recs, key=lambda r: (r["kappa"], r["L"], r["y"], r["dir"]))
 
 
-# ---------------------------------------------------------------------------------------------- pilot set (K7.2)
+# ---------------------------------------------------------------------------------------------- pilot set (K7.1)
 def analyse_pilot(recs):
     """The 39-chain pilot set: FSS table, H1 at 6^4, H2, H3, H4, H5, crossing, controls, verdict, phase labels.
 
@@ -648,7 +648,7 @@ def analyse_pilot(recs):
     return dict(verdict=v, fss=fss, labels=labels, stats=stats, comb=comb)
 
 
-# ---------------------------------------------------------------------------------------------- pilot + 8^4 set (K7.3)
+# ---------------------------------------------------------------------------------------------- pilot + 8^4 set (K7.2)
 def last_half_means(r, s):
     """Blocked means of the last half (after the cut) of the five observables of one chain."""
     bl = s["blen"]
@@ -933,13 +933,11 @@ def load_record(path):
     )
     for k in SERIES:
         rec[k] = np.asarray(s["ts_" + k]).astype(float)
-    if "ts_Sigma_stag" in s:
-        rec["Sigma_stag"] = np.asarray(s["ts_Sigma_stag"], float)
     return rec
 
 
 def load_records(which):
-    """'pilot' (the 39 chains of K7.2) or 'sharpened' (the five L = 8 chains on the kappa_c line added in K7.3)."""
+    """'pilot' (the 39 chains of K7.1) or 'sharpened' (the five L = 8 chains on the kappa_c line added in K7.2)."""
     recs = [load_record(p) for p in sorted(derived("k7", "t3a").glob("*/*.npz"))]
     return [r for r in recs if r["set"] == which]
 
