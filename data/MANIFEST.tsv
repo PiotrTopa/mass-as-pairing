@@ -27,6 +27,7 @@ derived	data/derived/algebra/eps_L6_y2.41_k-0.01_final.npz	5b1e4d294124241e7e6a3
 derived	data/derived/free/free_L4_aaaa.json	0cd4e617927f20952222ed1680457bcb	62066	scripts/derive_n1inst.py	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
 derived	data/derived/free/free_L4_pppa.json	3841747237dde2e041515caf2e8b0780	19307	scripts/derive_n1inst.py	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
 derived	data/derived/free/free_L4x8_aaaa.json	c56453675026537faf34c9b133ec6b81	32868	scripts/derive_n1inst.py	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
+derived	data/derived/free/free_L6_aaaa_h0.25_0.5_0.75.json	35cc187f65c4185a4f568b78b69536fd	34791	scripts/derive_n1stage1c.py	K5.9,K8.3	-
 derived	data/derived/free/free_L6_aaaa_h1.5_3.json	96962f2b7eb891a3bd6be0fb1336c131	22878	scripts/derive_n1inst.py	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
 derived	data/derived/free/free_L6x12_aaaa.json	262bd63502123957e04c7709aec4d0f7	59846	scripts/derive_n1inst.py	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
 derived	data/derived/free/free_L6x12_aaaa_h1.5_3.json	78d98b4c8b814f3144a461f6252f3965	25151	scripts/derive_n1inst.py	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
@@ -345,6 +346,15 @@ derived	data/derived/n1stage/S1b/L8/L8_y2.41_k-0.01_g0_g60_h1.5_chiral_bcaaaa.np
 derived	data/derived/n1stage/S1b/L8/L8_y2.41_k-0.01_g0_g60_h3_chiral_bcaaaa.npz	0ae892176182bb02690fdaf47ae6c579	43577	scripts/derive_n1stage.py	K4.2,K4.3,K4.4,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
 derived	data/derived/n1stage/S1b/L8/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	1c8ace0932be63f6acb8996b03684b77	92853	scripts/derive_n1stage.py	K4.2,K4.3,K4.4,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
 derived	data/derived/n1stage/S1b/L8/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	5dfea51aae34b9363c5e0f8494d6e751	91109	scripts/derive_n1stage.py	K4.2,K4.3,K4.4,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
+derived	data/derived/n1stage/S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.25_chiral_bcaaaa.npz	2c4be02bcc91a5800a7a32ad34ffa1dd	78444	scripts/derive_n1stage1c.py	K5.9,K8.3	-
+derived	data/derived/n1stage/S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	3089f0b0372210aaf0b335534c874fe1	78762	scripts/derive_n1stage1c.py	K5.9,K8.3	-
+derived	data/derived/n1stage/S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.75_chiral_bcaaaa.npz	16074964c3d4e045e450380ccf0d512c	78741	scripts/derive_n1stage1c.py	K5.9,K8.3	-
+derived	data/derived/n1stage/S1c/L6_r2/L6_y2.41_k-0.01_g0_g60_h0.25_chiral_bcaaaa.npz	7fe93e204f92491e192bcfad4acdc3ae	78706	scripts/derive_n1stage1c.py	K5.9,K8.3	-
+derived	data/derived/n1stage/S1c/L6_r2/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	bba1ec3dcb0f545a2f08524e13f83201	78841	scripts/derive_n1stage1c.py	K5.9,K8.3	-
+derived	data/derived/n1stage/S1c/L8_h1_rA/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	6c1ec75ad06e962ea5167704dd0db2a1	53946	scripts/derive_n1stage1c.py	K5.8,K5.9	-
+derived	data/derived/n1stage/S1c/L8_h1_rB/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	1e586003798946c653c6cc58e79bce68	53905	scripts/derive_n1stage1c.py	K5.8,K5.9	-
+derived	data/derived/n1stage/S1c/L8_h2_rA/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	10b8f3976d84732393d3f590cd9f83f6	53852	scripts/derive_n1stage1c.py	K5.8,K5.9	-
+derived	data/derived/n1stage/S1c/L8_h2_rB/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	0c6784571919dbb2f4c3fc029af2ba89	53860	scripts/derive_n1stage1c.py	K5.8,K5.9	-
 derived	data/derived/n1stage/S3/L6_y3_h0.5_flipped.npz	66562e21843d35ca0987beb15c92c5c6	35419	scripts/derive_n1stage.py	K4.2,K4.3,K4.4,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
 derived	data/derived/n1stage/S3/free_flipped_L6_aaaa_h0.0.json	1b37f57c46a7a1f57d701b0727ed5d0a	6622	scripts/derive_n1stage.py	K4.2,K4.3,K4.4,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
 derived	data/derived/n1stage/S3/free_flipped_L6_aaaa_h0.5.json	bef3d8e199fcfce6a5e23e23ecdb1f8c	9342	scripts/derive_n1stage.py	K4.2,K4.3,K4.4,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	-
@@ -454,6 +464,7 @@ raw	results/laneE/c060/plain/L4_y2.41_k-0.01.npz	86f0f649dbad56d9c3b045f516ef98b
 raw	results/laneK1/free_L4_aaaa.json	0cd4e617927f20952222ed1680457bcb	62066	frozen free baseline (archive)	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.7,K5.8,K8.1,K8.2	10.5281/zenodo.23117210:mass-as-pairing-data_n1.tar.gz
 raw	results/laneK1/free_L4_pppa.json	3841747237dde2e041515caf2e8b0780	19307	frozen free baseline (archive)	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.7,K5.8,K8.1,K8.2	10.5281/zenodo.23117210:mass-as-pairing-data_n1.tar.gz
 raw	results/laneK1/free_L4x8_aaaa.json	c56453675026537faf34c9b133ec6b81	32868	frozen free baseline (archive)	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.7,K5.8,K8.1,K8.2	10.5281/zenodo.23117210:mass-as-pairing-data_n1.tar.gz
+raw	results/laneK1/free_L6_aaaa_h0.25_0.5_0.75.json	35cc187f65c4185a4f568b78b69536fd	34791	notebook output (archive)	K5.9,K8.3	10.5281/zenodo.23117210:mass-as-pairing-data_n1-stage1c.tar.gz
 raw	results/laneK1/free_L6_aaaa_h1.5_3.json	96962f2b7eb891a3bd6be0fb1336c131	22878	frozen free baseline (archive)	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.7,K5.8,K8.1,K8.2	10.5281/zenodo.23117210:mass-as-pairing-data_n1.tar.gz
 raw	results/laneK1/free_L6x12_aaaa.json	262bd63502123957e04c7709aec4d0f7	59846	frozen free baseline (archive)	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.7,K5.8,K8.1,K8.2	10.5281/zenodo.23117210:mass-as-pairing-data_n1.tar.gz
 raw	results/laneK1/free_L6x12_aaaa_h1.5_3.json	78d98b4c8b814f3144a461f6252f3965	25151	frozen free baseline (archive)	K4.2,K4.3,K4.4,K5.1,K5.2,K5.3,K5.4,K5.5,K5.7,K5.8,K8.1,K8.2	10.5281/zenodo.23117210:mass-as-pairing-data_n1.tar.gz
@@ -691,6 +702,15 @@ raw	results/xi_scan/K_N1_S1b/pre/L6/L6_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	9cb
 raw	results/xi_scan/K_N1_S1b/pre/L6/L6_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	f16ad2d43cc4647f0a723bb99029195e	9083530	chain run (archive)	K4.3,K4.4,K5.4,K5.5,K5.7,K5.8,K6.3,K8.1,K8.2,M.1	10.5281/zenodo.23117210:mass-as-pairing-data_n1.tar.gz
 raw	results/xi_scan/K_N1_S1b/pre/L8/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	3d9afe83ccec3a1c06c41c035f461171	6335554	chain run (archive)	K4.3,K4.4,K5.4,K5.5,K5.7,K5.8,K8.1,K8.2,M.1	10.5281/zenodo.23117210:mass-as-pairing-data_n1.tar.gz
 raw	results/xi_scan/K_N1_S1b/pre/L8/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	e11b2c87e2ae7f93a73dc9df44ef0b54	5519946	chain run (archive)	K4.3,K4.4,K5.4,K5.5,K5.7,K5.8,K8.1,K8.2,M.1	10.5281/zenodo.23117210:mass-as-pairing-data_n1.tar.gz
+raw	results/xi_scan/K_N1_S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.25_chiral_bcaaaa.npz	08675156b011742ee0e3d080a5dc3e73	9083554	chain run (archive)	K5.9,K8.3	10.5281/zenodo.23117210:mass-as-pairing-data_n1-stage1c.tar.gz
+raw	results/xi_scan/K_N1_S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	d4b130953d3a821eb9a9de7c1c312ee7	9083554	chain run (archive)	K5.9,K8.3	10.5281/zenodo.23117210:mass-as-pairing-data_n1-stage1c.tar.gz
+raw	results/xi_scan/K_N1_S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.75_chiral_bcaaaa.npz	394c44350e67648926fd42aea5bbec0d	9083554	chain run (archive)	K5.9,K8.3	10.5281/zenodo.23117210:mass-as-pairing-data_n1-stage1c.tar.gz
+raw	results/xi_scan/K_N1_S1c/L6_r2/L6_y2.41_k-0.01_g0_g60_h0.25_chiral_bcaaaa.npz	4da6af63679c76ea3c6c769cbd059eea	9083562	chain run (archive)	K5.9,K8.3	10.5281/zenodo.23117210:mass-as-pairing-data_n1-stage1c.tar.gz
+raw	results/xi_scan/K_N1_S1c/L6_r2/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	0e4fdc4b1ed10f6ccea595adb229e32a	9083554	chain run (archive)	K5.9,K8.3	10.5281/zenodo.23117210:mass-as-pairing-data_n1-stage1c.tar.gz
+raw	results/xi_scan/K_N1_S1c/L8_h1_rA/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	3e1b5e0be072fc850893aa9abf951505	10617578	chain run (archive)	K5.8,K5.9	10.5281/zenodo.23117210:mass-as-pairing-data_n1-stage1c.tar.gz
+raw	results/xi_scan/K_N1_S1c/L8_h1_rB/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	706c2416910d70737700db95c85a7301	10617570	chain run (archive)	K5.8,K5.9	10.5281/zenodo.23117210:mass-as-pairing-data_n1-stage1c.tar.gz
+raw	results/xi_scan/K_N1_S1c/L8_h2_rA/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	692e96aa9a116b0c013dd0acdb829460	10617566	chain run (archive)	K5.8,K5.9	10.5281/zenodo.23117210:mass-as-pairing-data_n1-stage1c.tar.gz
+raw	results/xi_scan/K_N1_S1c/L8_h2_rB/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	e1888471a93bd3b367407d81c1dec623	10617582	chain run (archive)	K5.8,K5.9	10.5281/zenodo.23117210:mass-as-pairing-data_n1-stage1c.tar.gz
 raw	results/xi_scan/L6_k-0.04/L6_y2.028_k-0.04.npz	5a703bdf7b927ccbab4e621383834b33	548874	chain run (archive)	K6.2,K7.1,K7.2	10.5281/zenodo.23117210:mass-as-pairing-data_eps-model.tar.gz
 raw	results/xi_scan/L6_k-0.04/L6_y2.283_k-0.04.npz	5576a7e27ab7374d973138adf9220816	549242	chain run (archive)	K6.2,K7.1,K7.2	10.5281/zenodo.23117210:mass-as-pairing-data_eps-model.tar.gz
 raw	results/xi_scan/L6_k-0.04/L6_y2.368_k-0.04.npz	82b61fdd0f4d70f9bd9b17f4ffe7413e	548882	chain run (archive)	K6.2,K7.1,K7.2	10.5281/zenodo.23117210:mass-as-pairing-data_eps-model.tar.gz

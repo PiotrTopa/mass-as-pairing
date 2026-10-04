@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Download the raw chain archive from Zenodo (DOI masspairing.data.DATA_DOI), verify it and unpack it.
 
-    python scripts/fetch_data.py --out archive                     # all four bundles (about 0.5 GB download)
+    python scripts/fetch_data.py --out archive                     # all five bundles (about 0.6 GB download)
     python scripts/fetch_data.py --out archive --bundle eps-model  # only the bundles whose name contains the argument
     python scripts/fetch_data.py --out archive --verify-only       # no network: check an unpacked archive
     make derived MASSPAIRING_ARCHIVE=archive                       # then rebuild data/derived from it

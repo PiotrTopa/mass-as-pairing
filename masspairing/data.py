@@ -38,7 +38,10 @@ ARCHIVE_BUNDLES = {
     r"|results/(calib|hmc_validation|laneE|laneK2)/",
     "mass-as-pairing-data_wedge.tar.gz": r"results/xi_scan/(F8_|F9_)|results/(laneW2|laneR)/",
     "mass-as-pairing-data_nodal-source.tar.gz": r"results/xi_scan/S_prod/|results/laneS/",
-    "mass-as-pairing-data_n1.tar.gz": r"results/xi_scan/K_N1_|results/(laneK5S1A|laneK5S1bA|laneK4Z|laneK1)/",
+    "mass-as-pairing-data_n1.tar.gz": r"results/xi_scan/K_N1_(?!S1c/)|results/(laneK5S1A|laneK5S1bA|laneK4Z)/"
+    r"|results/laneK1/(?!free_L6_aaaa_h0\.25_0\.5_0\.75\.json$)",
+    "mass-as-pairing-data_n1-stage1c.tar.gz": r"results/xi_scan/K_N1_S1c/"
+    r"|results/laneK1/free_L6_aaaa_h0\.25_0\.5_0\.75\.json$",
 }
 
 

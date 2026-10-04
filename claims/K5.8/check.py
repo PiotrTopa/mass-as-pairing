@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """K5.8 -- stage 1b at y = 3.0 (SMG) by the pre-registered clauses on the NEW samples only: (a) the light half keeps
 its own gap at h = 1 and h = 2; (b) does not fire; the partial outcome at h = 2 recorded; pooled values labelled;
-the controls of the clause logic. Reads data/derived/n1stage/{S1,S1b}, the alpha files of the new configurations and
-the free baselines (about 1-2 min)."""
+the controls of the clause logic. Stage 1c (asserted beside): the same clauses on two independent 8^4 replicas per h,
+pooled -- class (a), the h = 2 partial outcome confirmed, (b) not fired; free-scaling sabotage. Reads
+data/derived/n1stage/{S1,S1b,S1c}, the alpha files of the new configurations and the free baselines (about 1-2 min)."""
 
 import pathlib
 import sys
@@ -13,6 +14,7 @@ import numpy as np
 
 from masspairing.analysis import stage0, stage1
 from masspairing.analysis import stage1b as B
+from masspairing.analysis import stage1c as C1c
 from masspairing.claimcheck import Check
 
 c = Check("K5.8")
@@ -162,4 +164,82 @@ for r in stage1.alpha_records("S1b"):
         f"{r['rd_L']['alpha']:.3f}({r['rd_L']['alpha_err']:.3f}) [free {r['free']['rd_L']['alpha']:.2f}], "
         f"|O_L(p1)|/free {r['rd_L']['normO1'] / r['free']['rd_L']['normO1']:.3f}",
     )
+# 6. stage 1c: two independent 8^4 replicas per h (notebook C204); the 6^4 side is the stage-1b new row
+rows1b_1c, _, R1c = C1c.analyse()
+S1c = R1c["A_scores"]
+for r in ("rA", "rB"):
+    v = S1c["per_replica"][r]["rows"]
+    c.item(
+        f"stage 1c replica {r}: class; e - e_free at h = 1, 2",
+        (S1c["per_replica"][r]["class"], v["1.0"]["e_minus_free"], v["2.0"]["e_minus_free"]),
+        S1c["per_replica"][r]["class"] == "(a)"
+        and v["2.0"]["partial_growth"]
+        and v["1.0"]["null_e"]
+        and not v["1.0"]["b"]
+        and not v["2.0"]["b"],
+        "{0[0]}; {0[1][0]:.3f}({0[1][1]:.3f}), {0[2][0]:.3f}({0[2][1]:.3f})",
+    )
+P, V1c = S1c["pooled"]["rows"], R1c["A_verdict"]
+p1, p2 = P["1.0"], P["2.0"]
+c.item(
+    "stage 1c pooled rA u rB: class (a); r_L^cosh(8^4) at h = 1, 2; g(8^4) at h = 1, 2",
+    (p1["r_L8"], p2["r_L8"], p1["g8"][0], p2["g8"][0]),
+    S1c["pooled"]["class"] == "(a)"
+    and p1["a"]
+    and p2["a"]
+    and abs(p1["r_L8"][0] - 0.977) < 0.001
+    and abs(p2["r_L8"][0] - 0.921) < 0.001
+    and abs(p1["g8"][0] - 0.0030) < 5e-5
+    and abs(p2["g8"][0] - 0.0034) < 5e-5,
+    "{0[0][0]:.3f}({0[0][1]:.3f}), {0[1][0]:.3f}({0[1][1]:.3f}); {0[2]:.4f}, {0[3]:.4f}",
+)
+e2, s2_ = p2["e_minus_free"]
+c.item(
+    "stage 1c pooled, h = 2: e - e_free, its 2 sigma lower edge (> 0: the partial outcome CONFIRMED; < 0.5: (b1) "
+    "does not fire), significance",
+    (e2, s2_, e2 - 2 * s2_, e2 / s2_),
+    V1c["2.0"]["line"] == "CONFIRMED"
+    and abs(e2 - 0.600) < 0.002
+    and abs(s2_ - 0.104) < 0.002
+    and 0 < e2 - 2 * s2_ < 0.5
+    and not p2["b1"]
+    and p2["partial_growth"],
+    "{0[0]:.3f}({0[1]:.3f}), {0[2]:+.2f}, {0[3]:.1f} sigma",
+)
+c.item(
+    "stage 1c pooled, h = 2: (b) does not fire -- R_peak(8^4) < 1 (b2), b3 holds",
+    p2["R_peak8"],
+    not p2["b2"] and p2["R_peak8"][0] < 1 and abs(p2["R_peak8"][0] - 0.88) < 0.005 and p2["b3"] and not p2["b"],
+    "{0[0]:.2f}({0[1]:.2f})",
+)
+e1, s1_ = p1["e_minus_free"]
+c.item(
+    "stage 1c pooled, h = 1: e - e_free -> not resolved",
+    (e1, s1_),
+    V1c["1.0"]["line"] == "not resolved" and abs(e1 - 0.296) < 0.002 and abs(s1_ - 0.167) < 0.002 and p1["null_e"],
+    "{0[0]:.3f}({0[1]:.3f})",
+)
+W = S1c["pooled_with_1b"]["rows"]
+c.item(
+    "stage 1c pooled with the stage-1b extensions (labelled): class (a); e - e_free at h = 2",
+    (S1c["pooled_with_1b"]["class"], W["2.0"]["e_minus_free"]),
+    S1c["pooled_with_1b"]["class"] == "(a)"
+    and abs(W["2.0"]["e_minus_free"][0] - 0.551) < 0.002
+    and W["2.0"]["partial_growth"]
+    and not W["2.0"]["b"],
+    "{0[0]}; {0[1][0]:.3f}({0[1][1]:.3f})",
+)
+ca = R1c["A_controls"]
+c.item(
+    "stage 1c controls on the pooled rows: S2' -> (b), S3' -> (c), S6' -> not (a)/(b)",
+    (ca["S2'"]["cls"], ca["S3'"]["cls"], ca["S6'"]["cls"]),
+    ca["S2'"]["ok"] and ca["S3'"]["ok"] and ca["S6'"]["ok"],
+)
+sb = C1c.sabotage_free_scaling(rows1b_1c, S1c)
+c.item(
+    "sabotage: pooled chi_L(8^4, h = 2) set to its free-scaling value -> e - e_free, NOT REPRODUCED",
+    (sb["row"]["e_minus_free"], sb["line"]),
+    sb["line"] == "NOT REPRODUCED" and sb["row"]["null_e"] and not sb["row"]["partial_growth"],
+    "{0[0][0]:.3f}({0[0][1]:.3f}) -> {0[1]}",
+)
 c.done()

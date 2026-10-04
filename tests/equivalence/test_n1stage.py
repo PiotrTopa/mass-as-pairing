@@ -1,10 +1,13 @@
-"""The N1 stage analyses (masspairing.analysis.stage0/stage1/stage1b) against the notebook's frozen outputs.
+"""The N1 stage analyses (masspairing.analysis.stage0/stage1/stage1b/stage1c) against the notebook's frozen outputs.
 
 References (tests/reference/n1stage/, copied from the research notebook at 3c4a02c, absolute paths stripped):
   rows.json, verdict.json, controls.json           stage-1 reader, verdict, M trigger, K4 criteria and controls
   rows_1b.json, verdict_1b.json, controls_1b.json  stage-1b reader, y = 3.0 clauses, T1-T5, S7', integrity, E3, controls
   recalc_E1_E2_E8.json                             the recorded stage-1b tables
   alpha_summary.json, alpha_summary_1b.json        the alpha_L readouts
+  rows_1c.json, verdict_1c.json, sensitivity_1c.json   stage-1c rows, integrity, replica consistency, y = 3.0 clauses
+                                                   per replica / pooled, onset fits, controls, recorded sensitivity
+                                                   (notebook commit fd0c934; make_n1stage1c_reference.py)
 The derived chain files carry exactly the archive's time series, so the readers are bit-identical; the alpha readout
 works on the corner blocks compressed to the light / heavy subspaces (U^dag G U instead of P G P, equal Frobenius
 norms), so it agrees to rounding (max 3.4e-13 relative). Tolerance: 1e-12 relative, absolute for entries below
@@ -18,13 +21,14 @@ import pathlib
 
 import pytest
 
-from masspairing.analysis import stage0, stage1, stage1b
+from masspairing.analysis import stage0, stage1, stage1b, stage1c
 from masspairing.analysis.n1stage import to_json
 
 REF = pathlib.Path(__file__).resolve().parents[1] / "reference" / "n1stage"
 TOL = 1e-12
 FLOOR = 1e-12  # entries below are rounding residues of exact zeros (e.g. the p-even part of a free massless block)
 SKIP = {"file", "name", "rd_all", "massed_all", "selftest", "md5_matches_K4Z", "md5_matches_delivered"}
+SKIP_1C = {"file", "name", "origin", "reading"}  # file names and descriptive text; every number and flag is compared
 
 
 def ref(name):
@@ -161,3 +165,25 @@ def test_alpha(tag, name):
     w = worst(devs)
     print(f"alpha {tag}: {len(devs)} numbers, max relative deviation {w[0]:.1e} ({w[1]})")
     assert w[0] <= TOL, w
+
+
+@pytest.fixture(scope="module")
+def s1c():
+    return stage1c.analyse(with_sensitivity=True)
+
+
+def test_stage1c(s1c):
+    """Stage 1c: every number of the notebook's frozen rows, verdict and sensitivity, bit-identical."""
+    _, tagrow, res = s1c
+    devs = compare(stage1c.rows_json(tagrow), ref("rows_1c.json"), skip=SKIP_1C)
+    got = stage1c.to_json(stage1c.strip({k: v for k, v in res.items() if k != "sensitivity"}))
+    devs += compare(got, ref("verdict_1c.json"), skip=SKIP_1C)
+    devs += compare(stage1c.to_json(res["sensitivity"]), ref("sensitivity_1c.json"), skip=SKIP_1C)
+    w = worst(devs)
+    print(f"stage-1c rows, verdict, sensitivity: {len(devs)} numbers, max relative deviation {w[0]:.1e} ({w[1]})")
+    assert len(devs) > 3000 and w[0] <= TOL, w
+    assert all(
+        r["file"] == ref("verdict_1c.json")["integrity"][t]["file"]
+        for t, r in got["integrity"].items()
+        if t != "all_ok"
+    )
