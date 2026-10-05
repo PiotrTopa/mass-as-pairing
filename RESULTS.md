@@ -3,8 +3,8 @@
 One section per paper claim. Every number is printed by the `check.py` of the claim tagged next to it
 (`[K5.8]` = `claims/K5.8/check.py`); `make check` runs them all. Errors are one standard deviation (blocked jackknife
 unless the claim states otherwise). Lattice units; P_c = (y, κ) = (2.41, −0.01) is the merged critical point of the
-ε model in these units [I.3]. "Free" means the same observable of the free theory at the same L, L_t, boundary
-conditions and h.
+ε model reported by the reference study, transferred to these units [I.3] (see the K7 caveats). "Free" means the same
+observable of the free theory at the same L, L_t, boundary conditions and h.
 
 The model: four reduced staggered fermion flavours (the lattice proxy of one Spin(10) generation, 16 Weyl fermions as
 (4,2,1) ⊕ (4̄,1,2) of Pati–Salam) with the on-site ε vertex decoupled by a σ triplet (ε model); optionally the
@@ -95,13 +95,15 @@ orders, it is the columnar bond crystal; where U(1)_ε is exact and no crystal f
 - Same-parity pairing source: (6,8) exponents of ⟨Φ_src⟩/h −0.055(55), −0.030(48), 0.30–0.42 × free → no SSB [K3.4].
 - U(1)_ε-exact family (y = 0 and the −edge): χ₁₀ 0.12–0.49 × free; bond crystal at g_j = 0.2 (dimer exponents 2.33(12),
   2.17(10)); free-like gapless fermion at g_j ≤ 0.1 [K3.5].
-- +edge bond crystal at (2.41, 0.1): V⟨D_∥²⟩ = 5.11 / 15.65 / 39.19 at L = 4 / 6 / 8 [K3.6].
+- +edge bond crystal at (2.41, 0.1): V⟨D_∥²⟩ = 5.11 / 15.65 / 39.19 at L = 4 / 6 / 8 on the K3.6 chains [K3.6];
+  4.97 / 15.72 / 39.28 on the K3.1 chains (the dimer positive control) [K3.1].
 
 **Links.** `claims/K3.1/` … `claims/K3.6/`; data `data/derived/k3/`; tables `results/K3_chi10_scaling.csv`,
 `results/K3_linear_response.csv`, `results/K3_source_ssb.csv`, `results/K3_dimer.csv`; figure
 [`figures/k3_chi10_response.pdf`](figures/k3_chi10_response.pdf) (`scripts/fig_k3.py`).
 
-**Caveats.** Two volume pairs; these are finite-size statements at L ≤ 8, not scaling dimensions. The 8⁴ χ₁₀ of K3.1,
+**Caveats.** Two volume pairs; these are finite-size statements at L ≤ 8, not scaling dimensions. The two sets of
+V⟨D_∥²⟩ at (2.41, 0.1) are independent replicas of the same point (different chains and seeds), both listed. The 8⁴ χ₁₀ of K3.1,
 K3.4 and K3.5 come from the stochastic estimator. R is a finite-g response. The source of K3.4 is a nodal pairing field,
 not a Majorana mass. The on-site 6 channel has no readout at y = 0.
 
@@ -130,7 +132,9 @@ production-boundary-condition feature at 4⁴/6⁴; K4 at P_c is quoted from K4.
 ## K5. The light half under an explicit partner Majorana mass
 
 **Statement.** With h C_χ on one taste doublet of every flavour, every Lorentz-scalar mass of the other (light) doublet —
-Majorana or Dirac — is an exact symmetry zero of the action on hypercubic-symmetric boxes and in infinite volume. More
+Majorana or Dirac, flavour-symmetric or flavour sextet — is an exact symmetry zero of the action under its full symmetry
+group (the lattice stabiliser of C_χ with the one-site shifts, and the flavour SO(4)) on hypercubic-symmetric boxes and
+in infinite volume; the point group alone removes the flavour-symmetric masses but not two sextet strings. More
 generally: if no light mass bilinear is invariant under the symmetry the explicit mass leaves, and that symmetry is not
 broken spontaneously, every mass-type part of the light two-point function vanishes, for elementary operators and for
 composite partners with the light quantum numbers alike; a seesaw light mass Δ M⁻¹ Δᵀ is such a part, so it needs
@@ -138,12 +142,18 @@ spontaneous breaking ("no seesaw without re-Higgsing"). An interacting 0+1-dimen
 exactly and shows what it does not fix: a symmetric light gap can still fall like 1/M with a vanishing mass-type part,
 so the scaling of a gap does not identify a Majorana mass — the mass-type part of the propagator does. What the lattice
 data decide is the symmetric gap and SSB: in the SMG phase (y = 3.0) the pre-registered criteria read **(a)** at h = 1
-and 2 — the light half keeps a symmetric gap of nearly unchanged size, with a small drift toward free, and no
-symmetry-breaking clause fires — on the stage-1b extensions and on two independent 8⁴ replicas per h.
+and 2 — the light half keeps a symmetric gap of nearly unchanged size, with a small drift toward free, and the
+re-specified symmetry-breaking clause does not fire — on the stage-1b extensions and on two independent 8⁴ replicas per
+h. Spontaneous breaking at (3.0, h = 2) is not resolved at L ≤ 8 (neither established nor excluded): the growth of the
+light pair susceptibility relative to free on (6⁴, 8⁴) compares a 6⁴ box on which the taste split exists on 19.8 % of
+the momenta with a complete 8⁴ box, and on the complete pair (4⁴, 8⁴) the susceptibility relative to free falls with V.
 
 **Numbers.**
-- Symmetry zeros: 4⁴ aaaa group 384, 32 elements fix C_χ, 16 of them flip the light Majorana mass; group averages of
-  every light scalar mass ≤ 5.1 × 10⁻¹⁸ (zero to rounding) [K5.2].
+- Symmetry zeros, point group: 4⁴ aaaa group 384, 32 elements fix C_χ, 16 of them flip the light Majorana mass; group
+  averages of the seven flavour-symmetric light scalar masses ≤ 5.1 × 10⁻¹⁸ (zero to rounding) [K5.2].
+- Symmetry zeros, all 16 scalar mass strings (10 flavour-symmetric, 6 sextet), 4⁴ pppp and aaaa: under the 32-element
+  point-group stabiliser the on-site ε(x)χΣχ and four-link sextet strings average to 1.000 and 0.354; with the one-site
+  shifts (stabiliser 8192) every light part averages to zero; flavour SO(4) has no invariant in Λ²(4) [K5.12].
 - 0+1D (8 light + 8 heavy Majoranas): with the residual symmetry exact the light mass-type part is ≤ 5.1 × 10⁻¹⁵ at every
   heavy mass and coupling, with one symmetry-breaking term ≥ 7.8 × 10⁻⁵; without a light quartic the symmetric light gap
   falls like 1/M (slopes −1.09, −1.13) with zero mass-type part [K5.10].
@@ -151,19 +161,24 @@ symmetry-breaking clause fires — on the stage-1b extensions and on two indepen
   GR_p0(8⁴) = 0.9279 / 0.4457 at h = 0.5 / 2 [K5.1].
 - y = 3.0, verdict (a): light pair-channel cosh-mass ratio r_L^cosh(8⁴) = 0.977(2) (h = 1), 0.921(2) (h = 2) on the
   pooled independent replicas (stage 1b: 0.976(2), 0.920(2)); G_L(p_min)/free = 0.0030 / 0.0034 [K5.8, K5.11].
-- Recorded with the verdict, h = 2: the light pair susceptibility grows faster with V than free, e − e_free = 0.600(104)
-  on the replicas (5.8σ; 0.456(137) on stage 1b, 0.551(93) pooled with it); its 2σ lower edge 0.39 stays below the SSB
-  threshold 0.5, R_peak = 0.88(8) (no p = 0 peak sharper than free), on a susceptibility at 1.7 % of free; at h = 1 the
-  growth is not resolved, 0.30(17) [K5.8, K5.11].
+- Recorded with the verdict, h = 2, on (6⁴, 8⁴): the light pair susceptibility grows faster with V than free,
+  e − e_free = 0.600(104) on the replicas (5.8σ; 0.456(137) on stage 1b, 0.551(93) pooled with it), its 2σ lower edge
+  0.39 below the threshold 0.5 of the re-specified clause; χ_L/free = 1.7 % at 8⁴; at h = 1 not resolved, 0.30(17) [K5.8, K5.11].
+- R_peak = [χ_L(0)/χ_L(p_min)]/free at h = 2 rises from 0.61(5) (6⁴) to 0.88(8) (8⁴), 2.8σ, and stays below 1 [K5.8, K5.13].
+- Taste-split coverage on all-antiperiodic boxes: complete on 4⁴, 4³×8, 8⁴, 12⁴; 19.8 % of the momenta on 6⁴, 29.6 % on 6³×12 [K5.13].
+- Complete pair (4⁴, 8⁴), same observable: e − e_free = −0.32(4) at h = 2 and −0.44(7) at h = 1, against +0.51(9) on (6⁴, 8⁴) with the same reader (8.9σ apart) [K5.13].
+- h = 2, χ_L/free on the complete boxes: 0.0365 (4⁴) > 0.0255 (4³×8) > 0.0151 (8⁴); 6⁴: 0.0084, below all three [K5.13].
 - Stage-1c integrity: nine chains intact; the replicas agree with each other and with stage 1b (smallest p 0.16); the
   per-mille drift of the 8⁴ h = 1 chain lies in its stored stage-1 stretch (p = 0.005) [K5.9].
 - Stage 1 by its letter: no verdict at L ≤ 8 — the gap-floor proxy (t* log ratio) on 6³×12 is 0.066(3) / 0.086(1) < 0.3;
-  the SSB clause flagged once at the 2σ edge, e(2) = 0.786(129) at y = 3.0 [K5.5].
+  the SSB clause (b) (e − 2σ > 0.5 on (6⁴, 8⁴)) fired at (3.0, h = 2): e = 0.786(129), e − 2σ = 0.527, e_free = 0.387 [K5.5].
 - Stage 0 gates as written: G1 passes, G2 fails at h = 2 on r_L = 1.020(6) (+3.35σ), G3 fails [K5.3].
 
-**Links.** `claims/K5.1/` … `claims/K5.11/`; code `masspairing/analysis/stage1b.py`, `stage1c.py`,
-`masspairing/algebra/ed01.py`; data `data/derived/n1stage/`, `data/derived/free/`; tables
-`results/K5_verdict_stage1.csv`, `results/K5_verdict_1b.csv`, `results/K5_verdict_1c.csv`; figures
+**Links.** `claims/K5.1/` … `claims/K5.13/`; code `masspairing/analysis/stage1b.py`, `stage1c.py`,
+`mass_strings.py`, `complete_pair.py`, `masspairing/algebra/ed01.py`; data `data/derived/n1stage/`,
+`data/derived/free/`, `data/derived/n1inst/K512_mass_strings.json`; tables `results/K5_verdict_stage1.csv`,
+`results/K5_verdict_1b.csv`, `results/K5_verdict_1c.csv`, `results/K5_mass_strings.csv`,
+`results/K5_complete_pair.csv`, `results/K5_taste_coverage.csv`; figures
 [`figures/K5_h2_replicas.pdf`](figures/K5_h2_replicas.pdf),
 [`figures/K8_light_pair_gap_vs_h.pdf`](figures/K8_light_pair_gap_vs_h.pdf) (right panel: y = 3.0),
 [`figures/K5_E8_no_plateau.pdf`](figures/K5_E8_no_plateau.pdf) (`scripts/fig_n1stage.py`).
@@ -174,10 +189,15 @@ on L³×L_t boxes (6³×12) and on pppa boxes the (0,3) light Majorana component
 free-sized shape effect (free 6³×12: −0.00085 per flavour at h = 2, 5 % of the heavy amplitude), read against free
 [K5.2, K5.7]. The symmetry statement is the selection rule of the Weinberg operator in a Higgs language; what is
 specific here is its instance in an SMG phase and the measurement. Verdict (a) is read at y = 3.0 only; at P_c the light
-half moves toward free with h (K8). The h = 2 growth is a (6⁴, 8⁴) finite-size ratio: incipient symmetry breaking with
-a larger correlation length is not excluded by two volumes. The criteria of each stage were fixed before its data were
-read; the stage-1 criteria proved mis-specified for these data and stand as written [K5.5]; the stage-1b criteria were
-written with the stage-1 data known, and stage 1c repeats them on independent seeds.
+half moves toward free with h (K8). **Volume pairs:** on all-antiperiodic boxes the taste split exists on every momentum
+for L ≡ 0 mod 4 and on 19.8 % of them on 6⁴ (the infrared-most fifth of the modes), so every (6⁴, 8⁴) light-sector ratio
+compares two different mode sets; the h = 2 growth of K5.8/K5.11 is such a ratio and is not reproduced on the complete
+pair (4⁴, 8⁴), where χ_L/free falls with V at every h [K5.13]. 4⁴ is about 3ξ across in the SMG phase; a 12⁴ point at
+(3.0, 2) is the clean test. Spontaneous breaking at (3.0, h = 2) is not resolved at L ≤ 8. **Criteria:** the stage-1
+SSB clause (b) fired by its letter at (3.0, h = 2) [K5.5]; the stage-1b order re-specified (b) relative to free (e −
+e_free − 2σ > 0.5 together with R_peak and χ_L/free clauses), before any new trajectory and after the stage-1 row at the
+same (y, h) had been read; stage 1c applies the re-specified clauses unchanged to independent seeds. The stage-1
+clauses stand as written: their SSB threshold 0.5 lies just above the free exponent 0.39–0.45 of the pair [K5.5].
 
 ## K6. Corner-block readout
 
@@ -218,6 +238,13 @@ at P_c. The pre-registered rule returns "continuous (consistent with, L ≤ 8)".
 **Caveats.** Two volumes. The crossing sits slightly above y = 2.41 on the pooled data (+2.4σ) [K7.2]. The 8⁴ rule first
 returned UNDECIDED at 1000 trajectories per start (chain scoring); the starts were extended to 2000 and the unchanged rule
 applied [K7.2].
+
+**κ_c and the AFM boundary.** κ_c = −0.01 is the value of the reference study (arXiv:2608.18239), transferred to these
+units; the κ scan of the calibration places the closing of the AFM window in (−0.03, 0.05) [I.3].
+Our own κ lines bracket κ_c in (−0.04, +0.02): no AFM order on κ = −0.04 at any y, AFM order on κ = +0.02 at y = 2.452 [K7.1].
+Developed AFM order at P_c is excluded at L ≤ 8: |Σ_stag|₆/|Σ_stag|₈ = 1.37 (ordered: 1.01), γ/ν_eff = 1.6–1.8 (AFM: 3.89), R4 = 1.42–1.51 (AFM: 1.09) [K7.1, K7.2].
+A thin antiferromagnetic band at P_c, ordered only beyond L = 8, is not excluded; every result at P_c is a result at the
+transferred point.
 
 ## K8. An explicit mass on half of the generation at the critical point
 
@@ -305,7 +332,7 @@ García-Etxebarria–Montero's and the absence of a Majorana mass with exact ℤ
 
 The machinery the K claims rest on, each certified against an independent exact computation with a sabotage control:
 RHMC exact against exact-determinant Metropolis [I.1]; Hasenbusch/multiple-time-scale integrator [I.2]; calibration
-y = √2 y_ref, P_c = (2.41, −0.01) [I.3]; link-field HMC of the completed term against the all-orders bag expansion [I.4];
+y = √2 y_ref, P_c = (2.41, −0.01) transferred from the reference study [I.3]; link-field HMC of the completed term against the all-orders bag expansion [I.4];
 the link-field resonance at ωτ ≈ nπ and the trajectory-length jitter that removes it [I.5]; the complete 10/6-channel
 estimator [I.6]; the same-parity source [I.7]; the flavour-selective source with its |Pf| RHMC [I.8] and Pfaffian sign
 [I.9]; the N1 RHMC against exact-determinant Metropolis with the phase-flipped pattern rejected [I.10]; the N1 taste

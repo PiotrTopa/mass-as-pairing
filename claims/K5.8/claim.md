@@ -49,6 +49,15 @@ Stage 1c, two independent 8⁴ replicas per h (6⁴ side: the stage-1b new row; 
   pair channel is not a single cosh. α_L on the new configurations (K6.3 method, 8⁴ subsampled): 0.944(8) / 0.920(10)
   (6⁴, h = 1 / 2), 0.955(6) / 0.959(6) (8⁴), p-odd norm 5 % / 3 % of free.
 
+**Scope.** The h = 2 growth e − e_free = 0.600(104) is a (6⁴, 8⁴) ratio between a box on which the light/heavy
+taste split exists on 19.8 % of the momenta (6⁴, the infrared-most fifth of the modes) and a box on which it is
+complete (8⁴), so it is not a volume exponent of one observable. On the complete pair (4⁴, 8⁴) the same susceptibility
+relative to free falls with the volume (e − e_free = −0.32(4) at h = 2, −0.44(7) at h = 1), and at h = 2 it falls
+monotonically over the complete boxes 4⁴, 4³×8, 8⁴ with the 6⁴ value below all three (K5.13). R_peak rises from 0.61(5)
+on 6⁴ to 0.88(8) on 8⁴ (2.8σ) and stays below 1. Spontaneous breaking at (3.0, h = 2) is not resolved at L ≤ 8: neither
+established nor excluded. The clause (b) here is the stage-1b re-specification relative to free, written after the
+stage-1 row at the same (y, h) had flagged (b) by its letter (e = 0.786(129), K5.5).
+
 **Method.** `masspairing.analysis.stage1b.verdict_y3`: primary gap estimator the midpoint cosh mass of the mean light
 correlator CL_t (a two-fermion pair channel; delete-one-block jackknife with the error-model inflation);
 r_L^cosh = [m(h)/m(0)]/[m^free(h)/m^free(0)]; (a) r_L ≥ 0.7 − 2σ and g ≤ 0.1 + 2σ at every h, not (b); (b) = (b1)

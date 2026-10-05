@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Derived data of the N1 instrument claims (K4.1, K5.1, K5.2, I.8-I.11, K6.1, K6.2).
+"""Derived data of the N1 instrument claims (K4.1, K5.1, K5.2, K5.12, I.8-I.11, K6.1, K6.2).
 
     MASSPAIRING_ARCHIVE=/path python scripts/derive_n1inst.py                 # every part
     MASSPAIRING_ARCHIVE=/path python scripts/derive_n1inst.py free configs    # selected parts
@@ -12,11 +12,12 @@ Parts (outputs under data/derived/n1inst/ unless stated):
   takeover  time series (phi_T, phi_f, Pfaffian sign) of the 23 chains with the nodal source on flavour 4
   winding   corner-block loop readouts of the 39 phase-labelled stored configurations (K6_winding_stored.json)
   boxshape  free light amplitude on L^3 x 2L and hypercubic boxes (K52_box_shape.json)
+  massstrings  group averages of the 16 corner-space scalar mass strings on 4^4 pppp/aaaa (K512_mass_strings.json)
   i8        exact Metropolis (|Pf| weight) vs RHMC on 2^3 x 4, flavour-selective source (I8_chains.npz)
   i10       exact Metropolis (Woodbury) vs RHMC on 4^4 aaaa, taste-chiral mass, and the flipped pattern (I10_*.npz)
   manifest  data/manifest/n1inst.tsv (raw sources with md5/size, derived files)
-Parts without archive input (boxshape, i8, i10) run without MASSPAIRING_ARCHIVE. Single-threaded; i10 takes a few
-hours, i8 about half an hour.
+Parts without archive input (boxshape, massstrings, i8, i10) run without MASSPAIRING_ARCHIVE. Single-threaded; i10
+takes a few hours, i8 about half an hour, massstrings about a quarter of an hour.
 """
 
 import json
@@ -30,6 +31,7 @@ os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 import numpy as np
 
+from masspairing.analysis import mass_strings as MS
 from masspairing.analysis import n1inst as X
 from masspairing.data import CONFIGS, DERIVED, ROOT, archive_root, md5, strip_chain
 
@@ -158,6 +160,12 @@ def part_boxshape():
     p.write_text(X.dumps(out) + "\n")
 
 
+def part_massstrings():
+    OUT.mkdir(parents=True, exist_ok=True)
+    p = OUT / "K512_mass_strings.json"
+    p.write_text(X.dumps(MS.compute()) + "\n")
+
+
 def save_series(path, parts):
     out = {}
     for name, r in parts.items():
@@ -197,7 +205,12 @@ def part_i10():
 
 
 # ---- manifest ------------------------------------------------------------------------------------------------
-DERIVED_USERS = {"K6_winding_stored.json": "K6.2", "K52_box_shape.json": "K5.2", "I8_chains.npz": "I.8"}
+DERIVED_USERS = {
+    "K6_winding_stored.json": "K6.2",
+    "K52_box_shape.json": "K5.2",
+    "K512_mass_strings.json": "K5.12",
+    "I8_chains.npz": "I.8",
+}
 
 
 def part_manifest():
@@ -250,6 +263,7 @@ PARTS = dict(
     takeover=part_takeover,
     winding=part_winding,
     boxshape=part_boxshape,
+    massstrings=part_massstrings,
     i8=part_i8,
     i10=part_i10,
 )

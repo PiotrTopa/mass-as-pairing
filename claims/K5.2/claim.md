@@ -1,15 +1,23 @@
-# K5.2 — Symmetry zeros: no Lorentz-scalar mass of the light doublet (Majorana or Dirac) without SSB
+# K5.2 — Symmetry zeros under the point group: no flavour-symmetric Lorentz-scalar mass of the light doublet (Majorana or Dirac) without SSB
 
-**Statement.** With the taste-chiral Majorana mass h C_χ on the heavy doublet R (K5.1), every Lorentz-scalar mass term
-of the light doublet L — the three anti-self-dual plane masses C_asd(comp) (the Majorana LL masses, the (3,1) = Δ_L
-direction of the taste SU(2)_L × SU(2)_R) and the four one-link Dirac masses (LR, the (2,2) = Higgs direction) — is an
-exact symmetry zero of the sourced action on every box that carries the full hypercubic point group (L_t = L with the
+**Statement.** With the taste-chiral Majorana mass h C_χ on the heavy doublet R (K5.1), every flavour-symmetric
+Lorentz-scalar mass term of the light doublet L — the three anti-self-dual plane masses C_asd(comp) (the Majorana LL
+masses, the (3,1) = Δ_L direction of the taste SU(2)_L × SU(2)_R) and the four one-link Dirac masses (LR, the (2,2) =
+Higgs direction) — is an exact symmetry zero of the sourced action on every box that carries the full hypercubic point group (L_t = L with the
 same boundary condition on all four axes), and hence in the infinite-volume limit: its one-point function vanishes at
 every coupling unless a lattice (taste) symmetry breaks spontaneously. The symmetries used are site permutations with a
 flavour-blind sign field (χ(x) → s(x) χ(gx), s ∈ {±1}^V), so the ε-vertex (s⁴ = 1), the Yukawa and σ terms (s² = 1 on
 every on-site bilinear), the κ term and the flavour-blind source are invariant. The light half can be gapped only
 symmetrically or by spontaneous breaking, never by a mass term: the lattice form of "no left-handed mass without a Higgs
 condensate".
+
+**Scope.** The group of item 5 is the hypercubic point group (its 32-element stabiliser of C_χ); the terms are the
+seven flavour-symmetric light masses (from the 10 strings with an antisymmetric site kernel, the 10 of SU(4) ∋ δ_ab).
+The six flavour-sextet strings (symmetric site kernel, Λ²(4) of SO(4)) are not covered here: two of them, the on-site
+ε(x)χΣχ and the four-link string, are taste-diagonal light masses that the point-group stabiliser does not remove
+(averages 1.000 and 0.354). They vanish under the one-site shifts (the group of item 4) and under the flavour SO(4).
+The complete statement — all 16 strings, the full group (lattice stabiliser with shifts, and SO(4)), and the symmetry
+that removes each term — is K5.12.
 
 **Domain (box shape).** On L³×L_t boxes, and on boxes whose boundary conditions single out the time axis (pppa), the
 box symmetry is the cubic group × time reflections. Every element of the hypercubic stabiliser of C_χ that flips the

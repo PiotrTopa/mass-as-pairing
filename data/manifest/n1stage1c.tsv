@@ -5,17 +5,17 @@ raw	results/xi_scan/K_N1_S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	d4
 raw	results/xi_scan/K_N1_S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.75_chiral_bcaaaa.npz	394c44350e67648926fd42aea5bbec0d	9083554	chain run (archive)	K5.9,K8.3
 raw	results/xi_scan/K_N1_S1c/L6_r2/L6_y2.41_k-0.01_g0_g60_h0.25_chiral_bcaaaa.npz	4da6af63679c76ea3c6c769cbd059eea	9083562	chain run (archive)	K5.9,K8.3
 raw	results/xi_scan/K_N1_S1c/L6_r2/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	0e4fdc4b1ed10f6ccea595adb229e32a	9083554	chain run (archive)	K5.9,K8.3
-raw	results/xi_scan/K_N1_S1c/L8_h1_rA/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	3e1b5e0be072fc850893aa9abf951505	10617578	chain run (archive)	K5.8,K5.9
-raw	results/xi_scan/K_N1_S1c/L8_h1_rB/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	706c2416910d70737700db95c85a7301	10617570	chain run (archive)	K5.8,K5.9
-raw	results/xi_scan/K_N1_S1c/L8_h2_rA/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	692e96aa9a116b0c013dd0acdb829460	10617566	chain run (archive)	K5.8,K5.9
-raw	results/xi_scan/K_N1_S1c/L8_h2_rB/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	e1888471a93bd3b367407d81c1dec623	10617582	chain run (archive)	K5.8,K5.9
+raw	results/xi_scan/K_N1_S1c/L8_h1_rA/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	3e1b5e0be072fc850893aa9abf951505	10617578	chain run (archive)	K5.8,K5.9,K5.13
+raw	results/xi_scan/K_N1_S1c/L8_h1_rB/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	706c2416910d70737700db95c85a7301	10617570	chain run (archive)	K5.8,K5.9,K5.13
+raw	results/xi_scan/K_N1_S1c/L8_h2_rA/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	692e96aa9a116b0c013dd0acdb829460	10617566	chain run (archive)	K5.8,K5.9,K5.13
+raw	results/xi_scan/K_N1_S1c/L8_h2_rB/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	e1888471a93bd3b367407d81c1dec623	10617582	chain run (archive)	K5.8,K5.9,K5.13
 derived	data/derived/n1stage/S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.25_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.9,K8.3
 derived	data/derived/n1stage/S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.9,K8.3
 derived	data/derived/n1stage/S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.75_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.9,K8.3
 derived	data/derived/n1stage/S1c/L6_r2/L6_y2.41_k-0.01_g0_g60_h0.25_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.9,K8.3
 derived	data/derived/n1stage/S1c/L6_r2/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.9,K8.3
-derived	data/derived/n1stage/S1c/L8_h1_rA/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.8,K5.9
-derived	data/derived/n1stage/S1c/L8_h1_rB/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.8,K5.9
-derived	data/derived/n1stage/S1c/L8_h2_rA/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.8,K5.9
-derived	data/derived/n1stage/S1c/L8_h2_rB/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.8,K5.9
+derived	data/derived/n1stage/S1c/L8_h1_rA/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.8,K5.9,K5.13
+derived	data/derived/n1stage/S1c/L8_h1_rB/L8_y3_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.8,K5.9,K5.13
+derived	data/derived/n1stage/S1c/L8_h2_rA/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.8,K5.9,K5.13
+derived	data/derived/n1stage/S1c/L8_h2_rB/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.8,K5.9,K5.13
 derived	data/derived/free/free_L6_aaaa_h0.25_0.5_0.75.json	-	-	scripts/derive_n1stage1c.py	K5.9,K8.3

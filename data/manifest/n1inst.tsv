@@ -122,3 +122,4 @@ derived	data/derived/n1inst/I10_rhmc.npz	-	-	scripts/derive_n1inst.py	I.10
 derived	data/derived/n1inst/I8_chains.npz	-	-	scripts/derive_n1inst.py	I.8
 derived	data/derived/n1inst/K52_box_shape.json	-	-	scripts/derive_n1inst.py	K5.2
 derived	data/derived/n1inst/K6_winding_stored.json	-	-	scripts/derive_n1inst.py	K6.2
+derived	data/derived/n1inst/K512_mass_strings.json	-	-	scripts/derive_n1inst.py	K5.12

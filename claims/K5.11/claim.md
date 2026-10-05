@@ -21,6 +21,15 @@ resolved, e − e_free = 0.296(167). Pooled with the stage-1b extensions (labell
 
 Pooled, h = 2: G_L(p_min)/free 0.0034, R_peak(8⁴) 0.880(83), χ_L/free 0.0167(16).
 
+**Scope.** The h = 2 growth e − e_free = 0.600(104) is a (6⁴, 8⁴) ratio between a box on which the light/heavy
+taste split exists on 19.8 % of the momenta (6⁴, the infrared-most fifth of the modes) and a box on which it is
+complete (8⁴), so it is not a volume exponent of one observable. On the complete pair (4⁴, 8⁴) the same susceptibility
+relative to free falls with the volume (e − e_free = −0.32(4) at h = 2, −0.44(7) at h = 1), and at h = 2 it falls
+monotonically over the complete boxes 4⁴, 4³×8, 8⁴ with the 6⁴ value below all three (K5.13). R_peak rises from 0.61(5)
+on 6⁴ to 0.88(8) on 8⁴ (2.8σ) and stays below 1. Spontaneous breaking at (3.0, h = 2) is not resolved at L ≤ 8: neither
+established nor excluded. The clause (b) here is the stage-1b re-specification relative to free, written after the
+stage-1 row at the same (y, h) had flagged (b) by its letter (e = 0.786(129), K5.5).
+
 **Method.** `masspairing.analysis.stage1c` (the stage-1b reader per chain; pooled values with each member's
 delete-one-block jackknife × its own error-model inflation, conservative by construction); the clauses of
 `stage1b.verdict_y3`.

@@ -11,9 +11,13 @@ generation and its lattice proxy (four reduced staggered flavours with an ε ver
 - **K2** the sign-free class is flavour-democratic;
 - **K3** the ℤ₄-odd elementary (126) channel does not condense on the sign-free family (L ≤ 8);
 - **K4** composite takeover: in the SMG phase the Majorana response sits in the ε-vertex composite;
-- **K5** with an explicit Majorana mass on half of the generation, no light mass term arises without spontaneous
-  breaking (exact), and in the SMG phase the other half keeps a symmetric gap of nearly unchanged size, with a small
-  drift toward free (replicated on independent chains);
+- **K5** with an explicit Majorana mass on half of the generation, no light mass term — flavour-symmetric or flavour
+  sextet — arises without spontaneous breaking of the symmetry group of the action (exact; the lattice group with the
+  one-site shifts and the flavour SO(4), the point group alone leaving two sextet terms), and in the SMG phase the other
+  half keeps a symmetric gap of nearly unchanged size, with a small drift toward free (replicated on independent
+  chains); spontaneous breaking at the largest explicit mass is not resolved at L ≤ 8 — the growth of the light pair
+  susceptibility on (6⁴, 8⁴) compares a box with a partial taste split (19.8 % of the momenta) with a complete one, and
+  on the complete pair (4⁴, 8⁴) that susceptibility relative to free falls with the volume;
 - **K6** the corner-block frequency exponent as a per-configuration pole/zero readout;
 - **K7** the SMG transition shows no first-order signature at L ≤ 8;
 - **K8** at the critical point the explicit mass moves the critical line to larger y (large-N sign; the light

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Derived data of the N1 stage-1c claims (K5.8, K5.9, K8.3); needs MASSPAIRING_ARCHIVE.
+"""Derived data of the N1 stage-1c claims (K5.8, K5.9, K5.13, K8.3); needs MASSPAIRING_ARCHIVE.
 
 Writes
   data/derived/n1stage/S1c/<run>/<chain>.npz        the nine stage-1c chains: four independent 8^4 replicas at y = 3.0
@@ -30,7 +30,7 @@ FREE = DERIVED / "free"
 S1C = "results/xi_scan/K_N1_S1c"
 RUNS = ("L8_h2_rA", "L8_h2_rB", "L8_h1_rA", "L8_h1_rB", "L6", "L6_r2")
 FREE_FILE = "free_L6_aaaa_h0.25_0.5_0.75.json"
-USERS_8 = "K5.8,K5.9"
+USERS_8 = "K5.8,K5.9,K5.13"
 USERS_6 = "K5.9,K8.3"
 RAW = []  # (archive path, used_by)
 

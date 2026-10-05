@@ -179,6 +179,11 @@ c.item(
         for x in dm.values()
     ),
 )
+pc6, pc8 = comb[(-0.01, 6, 2.41)], comb[(-0.01, 8, 2.41)]
+c.record(
+    "(7) kappa = -0.01, y = 2.41 (P_c): |Sigma_stag|_6/|Sigma_stag|_8 (ordered ~ 1; fluctuation sqrt(V_8/V_6) = 1.78)",
+    f"{pc6['mabs'] / pc8['mabs']:.2f}",
+)
 c.item(
     "(7) kappa = -0.04, L = 6: O4 at y = 2.028 -> 2.452 (rises into the SMG range)",
     f"{Pm6[2.028]['O4']:.4f} -> {Pm6[2.452]['O4']:.4f}",

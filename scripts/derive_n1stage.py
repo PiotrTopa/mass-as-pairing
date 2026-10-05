@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Derived data of the N1 stage-0/1/1b claims (K4.2-K4.4, K5.3-K5.8, K6.3, K8.1, K8.2, M.1); needs MASSPAIRING_ARCHIVE.
+"""Derived data of the N1 stage-0/1/1b claims (K4.2-K4.4, K5.3-K5.8, K5.13, K6.3, K8.1, K8.2, M.1); needs
+MASSPAIRING_ARCHIVE.
 
 Writes
   data/derived/n1stage/S0/<lattice>/<chain>.npz    the 26 stage-0 chains (4^4, 4^3x8, 4^4 pppa)
@@ -80,8 +81,21 @@ def digest(a):
     return hashlib.md5(np.ascontiguousarray(a, dtype=float).tobytes()).hexdigest()[:16]
 
 
+K513_TAGS = ("", "_h0.5", "_h1", "_h2")
+
+
+def read_by_k513(dst):
+    """The y = 3.0 aaaa chains K5.13 reads: 4^4, 6^4, 8^4 at h = 0, 0.5, 1, 2 and 4^3 x 8 at h = 2."""
+    sub, name = dst.parent.name, dst.name
+    if sub == "L4x8":
+        return name == "L4x8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz"
+    return sub in ("L4", "L6", "L8") and name in {f"{sub}_y3_k-0.01_g0_g60{t}_chiral_bcaaaa.npz" for t in K513_TAGS}
+
+
 def chain(root, rel, dst, used_by):
     src = root / rel
+    if read_by_k513(dst):
+        used_by += ",K5.13"
     RAW.append((rel, used_by))
     strip_chain(src, dst, keys=KEYS, rel=rel)
     z = dict(np.load(dst, allow_pickle=True))
@@ -247,7 +261,7 @@ def manifest(root):
         prod = "chain run (archive)" if chain else "notebook output (archive)"
         lines.append(f"raw\t{rel}\t{md5(p)}\t{p.stat().st_size}\t{prod}\t{','.join(sorted(users[rel]))}")
     prod = "scripts/derive_n1stage.py"
-    use = "K4.2,K4.3,K4.4,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K6.3,K8.1,K8.2,M.1"
+    use = "K4.2,K4.3,K4.4,K5.3,K5.4,K5.5,K5.6,K5.7,K5.8,K5.13,K6.3,K8.1,K8.2,M.1"
     for p in sorted(OUT.rglob("*")):
         if p.is_file():
             lines.append(f"derived\t{p.relative_to(OUT.parents[2]).as_posix()}\t-\t-\t{prod}\t{use}")

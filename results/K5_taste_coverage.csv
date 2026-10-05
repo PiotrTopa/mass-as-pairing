@@ -1,0 +1,8 @@
+box,V,boundary_modes,split_fraction
+4x4x4x4 aaaa,256,0,1.0000
+6x6x6x6 aaaa,1296,1040,0.1975
+8x8x8x8 aaaa,4096,0,1.0000
+6x6x6x12 aaaa,2592,1824,0.2963
+4x4x4x8 aaaa,512,0,1.0000
+10x10x10x10 aaaa,10000,5904,0.4096
+12x12x12x12 aaaa,20736,0,1.0000
