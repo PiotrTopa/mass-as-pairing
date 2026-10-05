@@ -4,7 +4,9 @@ fit F1: m^2 - m0^2 = (c h^p)^2 on h in {0.25 (pooled replicas), 0.5 (pooled repl
 chain, gives p = 1.14(37); the interval p +- 2 sigma meets both the quadratic band [1.6, 2.4] and the linear band
 [0.7, 1.3] -> UNDECIDED. Power-limit control: a synthetic quadratic onset with the real errors also returns UNDECIDED
 (the fit cannot certify a quadratic onset at these errors); the linear synthetic returns "linear", the saturating one
-is not called quadratic. Reads data/derived/n1stage/{S1,S1b,S1c} and the free baselines (about 20 s)."""
+is not called quadratic. Reading (recorded, no assertion changed): p is consistent with p = 1, the h^2 onset of an
+observable that is even in h and analytic on a gapped box; with dm << m0 the band [1.6, 2.4] tests dm ~ h^4 and is
+mis-specified. Reads data/derived/n1stage/{S1,S1b,S1c} and the free baselines (about 20 s)."""
 
 import pathlib
 import sys
@@ -43,6 +45,13 @@ c.item(
     (F["p"], F["chi2_dof"], F["I"]),
     abs(F["p"][0] - 1.140) < 0.01 and abs(F["p"][1] - 0.366) < 0.01 and F["chi2_dof"] < 3,
     "{0[0][0]:.3f}({0[0][1]:.3f}), {0[1]:.2f}, [{0[2][0]:.2f}, {0[2][1]:.2f}]",
+)
+c.record(
+    "F1 against the h^2 onset required by h -> -h evenness on a gapped box (p = 1; with dm << m0, "
+    "m^2 - m0^2 ~ 2 m0 dm, so p = 1 <-> dm ~ h^2 and the band p in [1.6, 2.4] <-> dm ~ h^4): (p - 1)/sigma_p; "
+    "m(1) - m0 against m0",
+    f"{(F['p'][0] - 1) / F['p'][1]:.2f} sigma; {cv[(1.0, 'stage 1')][0] - cv[(0.0, 'stage 1 (h = 0)')][0]:.3f} vs "
+    f"{cv[(0.0, 'stage 1 (h = 0)')][0]:.3f}",
 )
 c.item(
     "F1 -> UNDECIDED: I meets the quadratic band [1.6, 2.4] and the linear band [0.7, 1.3], sigma_p > 0.3",

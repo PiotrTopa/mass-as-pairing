@@ -1,6 +1,9 @@
-"""The data DOI is the same everywhere it appears, and every raw file of the manifest lies in exactly one bundle."""
+"""The data DOI is the same everywhere it appears, and every raw file of the manifest lies in exactly one bundle or is
+marked pending (not yet deposited)."""
 
-from masspairing.data import ARCHIVE_BUNDLES, DATA, DATA_DOI, ROOT, archive_bundle
+import re
+
+from masspairing.data import ARCHIVE_BUNDLES, ARCHIVE_PENDING, DATA, DATA_DOI, ROOT, archive_bundle
 
 
 def test_doi_consistent():
@@ -11,6 +14,10 @@ def test_doi_consistent():
     rows = [dict(zip(cols, ln.split("\t"), strict=True)) for ln in lines[1:] if ln]
     raw = [r for r in rows if r["kind"] == "raw"]
     assert raw
-    assert all(r["archive"] == f"{DATA_DOI}:{archive_bundle(r['path'])}" for r in raw)
+    pending = [r for r in raw if r["archive"] == "pending"]
+    deposited = [r for r in raw if r["archive"] != "pending"]
+    assert all(re.match(ARCHIVE_PENDING, r["path"]) for r in pending)
+    assert all(not any(re.match(rx, r["path"]) for rx in ARCHIVE_BUNDLES.values()) for r in pending)
+    assert all(r["archive"] == f"{DATA_DOI}:{archive_bundle(r['path'])}" for r in deposited)
     assert all(r["archive"] == "-" for r in rows if r["kind"] != "raw")
-    assert {archive_bundle(r["path"]) for r in raw} == set(ARCHIVE_BUNDLES)
+    assert {archive_bundle(r["path"]) for r in deposited} == set(ARCHIVE_BUNDLES)

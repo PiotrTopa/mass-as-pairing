@@ -31,7 +31,12 @@ def found(tok, outputs, printed):
     t = tok.lstrip("-")
     if t in outputs:
         return True
-    if "." not in t or "e" in t:
+    if "e" in t:  # a x 10^n: match a printed number to the quoted mantissa digits (1.6e-13 ~ 1.6e-13, 7.8e-5 ~ 7.8e-05)
+        mant, ex = t.split("e")
+        nd = len(mant.split(".")[1]) if "." in mant else 0
+        target, tol = float(t), 0.5 * 10 ** (int(ex) - nd) * (1 + 1e-9)
+        return any(abs(abs(v) - target) <= tol for v in printed)
+    if "." not in t:
         return False
     nd = len(t.split(".")[1])
     target = float(t)
@@ -42,7 +47,7 @@ def main():
     text = (ROOT / "RESULTS.md").read_text().splitlines()
     misses, n = [], 0
     for ln in text:
-        tags = re.findall(r"\[((?:[KIM]\d*\.\d+(?:,\s*)?)+)\]", ln)
+        tags = re.findall(r"\[((?:[KIMN]\d*\.\d+(?:,\s*)?)+)\]", ln)
         if not tags:
             continue
         ids = [i.strip() for t in tags for i in t.split(",")]
@@ -60,8 +65,8 @@ def main():
                 printed.append(float(t))
             except ValueError:
                 pass
-        body = re.sub(r"\[(?:[KIM]\d*\.\d+(?:,\s*)?)+\]", "", ln)
-        body = re.sub(r"\b[KIM]\d(?:\.\d+)?\b", "", body)  # claim names in prose
+        body = re.sub(r"\[(?:[KIMN]\d*\.\d+(?:,\s*)?)+\]", "", ln)
+        body = re.sub(r"\b[KIM]\d(?:\.\d+)?\b|\bN\.\d+\b", "", body)  # claim names in prose
         for tok in numbers(body):
             if re.fullmatch(r"-?\d", tok):  # single digits (indices, counts in words)
                 continue

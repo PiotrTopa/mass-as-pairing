@@ -29,7 +29,11 @@ def manifest_rows():
     lines = (DATA / "MANIFEST.tsv").read_text().splitlines()
     cols = lines[0].split("\t")
     rows = [dict(zip(cols, ln.split("\t"), strict=True)) for ln in lines[1:] if ln]
-    return [(r["path"], r["md5"], int(r["bytes"]), r["archive"].rsplit(":", 1)[1]) for r in rows if r["kind"] == "raw"]
+    return [
+        (r["path"], r["md5"], int(r["bytes"]), r["archive"].rsplit(":", 1)[1])
+        for r in rows
+        if r["kind"] == "raw" and r["archive"] != "pending"  # pending: not yet in the deposit
+    ]
 
 
 def record_files(doi):

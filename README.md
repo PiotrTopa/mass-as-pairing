@@ -6,16 +6,21 @@ from another elementary fermion, the seesaw uses the self-conjugate ν_R with a 
 generation (SMG) builds it from the fermions themselves (ψ̄ψ̄ψ ∈ 16̄). The repository establishes, for one Spin(10)
 generation and its lattice proxy (four reduced staggered flavours with an ε vertex):
 
-- **K1** the structure and partner algebra (ℤ₄ the unique anomaly-free remnant, ℤ₄² = (−1)^F);
+- **K1** the structure and partner algebra (ℤ₄ the unique anomaly-free remnant, ℤ₄² = (−1)^F: no Majorana
+  (self-conjugate) pole in a ℤ₄-symmetric phase, while the Dirac pole of ψ with ψ̄ψ̄ψ is allowed);
 - **K2** the sign-free class is flavour-democratic;
 - **K3** the ℤ₄-odd elementary (126) channel does not condense on the sign-free family (L ≤ 8);
 - **K4** composite takeover: in the SMG phase the Majorana response sits in the ε-vertex composite;
-- **K5** with an explicit Majorana mass on half of the generation, the other half keeps its own SMG gap (no light mass
-  without spontaneous breaking);
+- **K5** with an explicit Majorana mass on half of the generation, no light mass term arises without spontaneous
+  breaking (exact), and in the SMG phase the other half keeps a symmetric gap of nearly unchanged size, with a small
+  drift toward free (replicated on independent chains);
 - **K6** the corner-block frequency exponent as a per-configuration pole/zero readout;
 - **K7** the SMG transition shows no first-order signature at L ≤ 8;
-- **K8** anti-seesaw: at the critical point the explicit mass gaps the other half (a crossover, not a power law);
-- **M** the critical-seesaw moonshot is closed as a null.
+- **K8** at the critical point the explicit mass moves the critical line to larger y (large-N sign; the light
+  observables move in that direction on 6⁴ and 8⁴): the critical ε/σ channel collapses and the other half de-criticalises
+  toward free, with no seesaw and no spontaneous breaking — a crossover, not a power law;
+- **M** the critical-seesaw moonshot is closed as a null;
+- **N** the ℤ₄ as a neutrino selection rule: no Majorana neutrino mass and no |ΔL| = 2 while it is exact.
 
 Statements, numbers and caveats: [RESULTS.md](RESULTS.md). Every claim is a directory `claims/<ID>/` with `claim.md`
 (statement, numbers, method, caveats, data) and `check.py` (which recomputes it and prints `PASS <ID>`); the status table
@@ -42,8 +47,9 @@ make figures    # figures in figures/
 ```
 
 All of these run from the committed derived data. Rebuilding the derived data needs the raw chain archive, deposited
-on Zenodo (DOI 10.5281/zenodo.23117210, four bundles, about 0.5 GB; files, md5 sums and bundles in
-[data/MANIFEST.tsv](data/MANIFEST.tsv)):
+on Zenodo (DOI 10.5281/zenodo.23117210, five bundles, about 0.7 GB; files, md5 sums and bundles in
+[data/MANIFEST.tsv](data/MANIFEST.tsv); six small raw files of K8.4–K8.9, marked `pending` there, are not yet in the
+deposit — their derived data are committed, so every check runs):
 
 ```
 python scripts/fetch_data.py --out archive            # download, check md5 sums, unpack
@@ -63,7 +69,8 @@ results/  figures/  final tables and figures, one script each in scripts/
 tests/              unit tests, equivalence tests against the notebook implementation (frozen references)
 ```
 
-Claim identifiers: `K<n>.<m>` supports paper claim K<n>; `I.<m>` certifies an instrument; `M.1` is the moonshot null.
+Claim identifiers: `K<n>.<m>` supports paper claim K<n>; `I.<m>` certifies an instrument; `M.1` is the moonshot null;
+`N.1` holds the neutrino selection rules.
 
 ## Provenance
 

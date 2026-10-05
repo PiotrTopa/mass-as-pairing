@@ -45,11 +45,23 @@ ARCHIVE_BUNDLES = {
 }
 
 
+# raw archive files that no bundle of the deposit holds yet (archive column "pending" in data/MANIFEST.tsv)
+ARCHIVE_PENDING = r"results/laneTH/|results/laneTHP/"
+
+
 def archive_bundle(rel):
     """The bundle of the deposit that holds the archive file ``rel`` (exactly one)."""
     hits = [b for b, rx in ARCHIVE_BUNDLES.items() if re.match(rx, rel)]
     assert len(hits) == 1, (rel, hits)
     return hits[0]
+
+
+def archive_column(rel):
+    """The manifest's archive entry of a raw file: "<DATA_DOI>:<bundle>", or "pending" (not yet deposited)."""
+    if re.match(ARCHIVE_PENDING, rel):
+        assert not any(re.match(rx, rel) for rx in ARCHIVE_BUNDLES.values()), rel
+        return "pending"
+    return f"{DATA_DOI}:{archive_bundle(rel)}"
 
 
 def archive_root():

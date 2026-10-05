@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""K8.2 -- anti-seesaw, tier 2, by the pre-registered tests T1-T5 on the new P_c chains with the stored h <= 2 rows as
-the fixed reference: T1 PASS (monotone rise), T2 FAIL (exponent outside the window), T3 UNDECIDED (not a single
-power; saturation holds), T4 PASS (no SSB), T5 PASS (V-check) -> "anti-seesaw holds, scaling prediction wrong": a
-crossover from a quadratic-like onset to saturation, not a power law. Recorded: E2 (sigma channel), E3 (8^4 quench).
+"""K8.2 -- tier 2, by the pre-registered tests T1-T5 on the new P_c chains with the stored h <= 2 rows as the fixed
+reference: T1 PASS (monotone rise), T2 FAIL (exponent outside the window), T3 UNDECIDED (not a single power;
+saturation holds), T4 PASS (no SSB), T5 PASS (V-check) -> the order's reading "anti-seesaw holds, scaling prediction
+wrong": a crossover from a steeper onset (6^4: p = 1.1(4) for h <= 1, K8.3) to saturation, not a power law.
+Recorded: E2 (sigma channel), E3 (8^4 quench).
 Reads data/derived/n1stage/{S1,S1b,e3_quench_L8_Pc.npz} and the free baselines (about 1-2 min)."""
 
 import pathlib

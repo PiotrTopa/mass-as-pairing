@@ -1,4 +1,4 @@
-# K8.2 — anti-seesaw, tier 2 as pre-registered: the rise is monotone, SSB-free and V-stable (T1, T4, T5 PASS), but it is not a power of h (T2 FAIL, T3 UNDECIDED) — a crossover from a quadratic-like onset to saturation
+# K8.2 — tier 2 as pre-registered: the light pair-channel effective mass rises monotonically through h = 3, SSB-free and V-stable (T1, T4, T5 PASS), but not as a power of h (T2 FAIL, T3 UNDECIDED) — a crossover to saturation
 
 **Statement.** At P_c (y = 2.41), with the new stage-1b chains at h = 1.5 and 3 and the stored h ∈ {0, 0.5, 1, 2} rows
 as the fixed reference, the pre-registered tests give: **T1 PASS** — the light pair-channel midpoint cosh mass rises
@@ -6,10 +6,12 @@ monotonically through h = 3 on 6³×12, 6⁴ and 8⁴ (every step 5–24σ); **T
 m(h)² = m₀² + (c h^κ)² gives κ = 0.44(6) on 6³×12 with an acceptable χ² (κ + 2σ < 0.7, below the window [0.7, 1.3]) and
 no acceptable single power on 6⁴ and 8⁴; **T3 UNDECIDED** — the ε/σ channel S(π)(h) − S_∞ is not a single power on any
 lattice (χ²/dof 12–15), while its saturation holds (at h = 3, S(π) and |Σ_stag| within 25 % of the SMG value at 2σ, with
-central values below it); **T4 PASS** — no SSB at P_c; **T5 PASS** — V-check. Reading by the order: **anti-seesaw holds,
-scaling prediction wrong.** Recorded (post hoc, not a criterion): the local exponent between adjacent h falls monotonically
-(8⁴: 1.8 → 1.3 → 0.9 → 0.6 in m² − m₀²) — a crossover from a quadratic-like onset at small h to saturation at h ≳ 2, not a
-power law.
+central values below it); **T4 PASS** — no SSB at P_c; **T5 PASS** — V-check. Reading by the order (its label: "anti-seesaw
+holds, scaling prediction wrong"): the monotone rise holds, the predicted scaling does not. Recorded (post hoc, not a
+criterion): the local exponent between adjacent h falls monotonically (8⁴: 1.8 → 1.3 → 0.9 → 0.6 in m² − m₀²; the 1.8 is a
+recorded number, not certified — the small-h onset on 6⁴ is consistent with the h² form required by the h → −h symmetry,
+K8.3) — a crossover from a steeper onset (6⁴: p = 1.1(4) for h ≤ 1, K8.3) to saturation at h ≳ 2, not a power law. The
+rise approaches the free value from below (K8.4).
 
 **Numbers.** (K8.2 check output; m = light pair-channel midpoint cosh mass)
 
@@ -54,8 +56,8 @@ m² = m₀² + (0.3h)² with the real per-block scatter) → κ = 1.000(23), PAS
 UNDECIDED (χ²/dof 35), never PASS. S4′ (labels y ↔ 3.0 at h = 2) → T3 UNDECIDED; the full-series swap (y = 3.0 at
 h ∈ {0.5, 1, 2}) returns a vacuous PASS, x = 6(17), χ²/dof 0.5.
 
-**Caveats.** h ∈ [0.5, 3] is not a scaling window: the response is quadratic-like at small h and saturating at h ≳ 2
-(the heavy doublet's mass approaching the cutoff). The light pair-channel gap is an effective mass at the stated t with no
+**Caveats.** h ∈ [0.5, 3] is not a scaling window: the response rises steeply at small h (even in h and analytic on a
+gapped box, so its onset is h², K8.3) and saturates at h ≳ 2 (the heavy doublet's mass approaching the lattice bandwidth). The light pair-channel gap is an effective mass at the stated t with no
 plateau at L_t ≤ 12. The 8⁴ h = 3 R_peak sits 2.7σ above free (recorded, not an SSB signal at an exponent excess of 0.04). The 6³×12
 light readings (the T2 lattice) carry a free-sized shape-induced light one-point function (K5.7, E9), in m₀ and m(h) alike.
 

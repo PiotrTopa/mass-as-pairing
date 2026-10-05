@@ -7,14 +7,15 @@ Fragment columns (tab-separated, header line first): kind, path, md5, bytes, pro
   md5,bytes may be "-" for committed files: they are recomputed here; for raw files they are required.
 Every committed file under data/derived and data/configs must appear in some fragment.
 The assembled manifest adds the column ``archive``: for a raw file, "<DATA_DOI>:<bundle>" (the Zenodo deposit and the
-bundle of it that holds the file, masspairing.data.ARCHIVE_BUNDLES); "-" for committed files.
+bundle of it that holds the file, masspairing.data.ARCHIVE_BUNDLES), or "pending" for a raw file not yet deposited
+(masspairing.data.ARCHIVE_PENDING); "-" for committed files.
 """
 
 import pathlib
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
-from masspairing.data import DATA, DATA_DOI, ROOT, archive_bundle, md5  # noqa: E402
+from masspairing.data import DATA, ROOT, archive_column, md5  # noqa: E402
 
 COLS = ["kind", "path", "md5", "bytes", "produced_by", "used_by"]
 
@@ -40,7 +41,7 @@ def main():
             else:
                 rows[key] = r
             r = rows[key]
-            r["archive"] = f"{DATA_DOI}:{archive_bundle(r['path'])}" if r["kind"] == "raw" else "-"
+            r["archive"] = archive_column(r["path"]) if r["kind"] == "raw" else "-"
     committed = {
         p.relative_to(ROOT).as_posix() for d in ("derived", "configs") for p in (DATA / d).rglob("*") if p.is_file()
     }
@@ -52,7 +53,8 @@ def main():
     cols = COLS + ["archive"]
     out = ["\t".join(cols)] + ["\t".join(r[c] for c in cols) for _, r in sorted(rows.items())]
     (DATA / "MANIFEST.tsv").write_text("\n".join(out) + "\n")
-    print(f"{len(rows)} entries ({sum(1 for k in rows if k[0] == 'raw')} raw)")
+    n_pending = sum(1 for r in rows.values() if r["archive"] == "pending")
+    print(f"{len(rows)} entries ({sum(1 for k in rows if k[0] == 'raw')} raw, {n_pending} pending deposit)")
 
 
 if __name__ == "__main__":

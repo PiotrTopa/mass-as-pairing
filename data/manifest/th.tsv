@@ -1,0 +1,37 @@
+kind	path	md5	bytes	produced_by	used_by
+raw	results/laneTH/sym6/L6_y2_k-0.01_g0_g60_chiral_bcaaaa.npz	408b621d0f1f3f67e58a35921c132e05	612036	chain run (archive)	K8.4,K8.5,K8.7
+raw	results/laneTH/sym6/L6_y2_k-0.01_g0_g60_h3_chiral_bcaaaa.npz	16b3ed4f13be286fdbe30517cc0bc4d0	612040	chain run (archive)	K8.4,K8.5,K8.7
+raw	results/laneTH/y3h3/L6_y3_k-0.01_g0_g60_h3_chiral_bcaaaa.npz	8f7dc21124d09a7b6756ed687744a598	612048	chain run (archive)	K8.4,K8.5,K8.7
+raw	results/laneTHP/mf_prod.json	7108bae49c7b461ba3295236aac93466	1749	notebook output (archive)	K8.6
+raw	results/laneTHP/sym8/h0/L8_y2_k-0.01_g0_g60_chiral_bcaaaa.npz	ca835875b615187a75f93ecf86fa9b52	5370886	chain run (archive)	K8.9
+raw	results/laneTHP/sym8/h3/L8_y2_k-0.01_g0_g60_h3_chiral_bcaaaa.npz	503a3c3720887f77feb25751da353d2b	5370882	chain run (archive)	K8.9
+raw	results/xi_scan/K_N1_S1/L6/L6_y2.41_k-0.01_g0_g60_chiral_bcaaaa.npz	c7620d639df0ce076ef64fe743e8f7bf	9083538	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L6/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	6549a3e72fa404c8abe6d573cbd4e705	9083542	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L6/L6_y2.41_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	ae164233bb2540ae042ea16a72239183	9083538	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L6/L6_y2.41_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	666274a79cd303d04dabab0820eb7462	9083538	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L6/L6_y3_k-0.01_g0_g60_chiral_bcaaaa.npz	7d7234f97848cfe847cf643a828a78de	9118566	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L6/L6_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	077e84bbd0de345f725042c0f41e97fd	18109530	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L6x12/L6x12_y2.41_k-0.01_g0_g60_chiral_bcaaaa.npz	78cc1e656e71473b98be271c3a48c79d	4927334	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L6x12/L6x12_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	33ac7f5fdb55fbd2e24f41c83324c238	4927342	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L6x12/L6x12_y2.41_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	b76675b0cb7ef51b50aa6fc85e242bfc	4927338	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L6x12/L6x12_y2.41_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	199a934d072769baa033c7c14ac5a3d7	4927342	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L8/L8_y2.41_k-0.01_g0_g60_chiral_bcaaaa.npz	5d6f975e1da681a37b9a6fb461e6fd11	5825814	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L8/L8_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	4b401a6e403c8fed67dd895ea1b788f0	5825810	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L8/L8_y2.41_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	53a681eab3d695178140eb0d54190521	5825806	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1/L8/L8_y2.41_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	8f0e220d4df7d4b7c2b19d01b9ff73f0	5825806	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1b/L6/L6_y2.41_k-0.01_g0_g60_h1.5_chiral_bcaaaa.npz	a3f16170c39e5be7d95a8cf91c3d6274	9083538	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1b/L6/L6_y2.41_k-0.01_g0_g60_h3_chiral_bcaaaa.npz	b042a1ef420f69fd5ec3e07c9c661b22	9083534	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1b/L6x12/L6x12_y2.41_k-0.01_g0_g60_h1.5_chiral_bcaaaa.npz	485492b58db411068744321796fe04ae	8802674	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1b/L6x12/L6x12_y2.41_k-0.01_g0_g60_h3_chiral_bcaaaa.npz	731f04a19dcd45083bf86e63966dd652	8802658	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1b/L8/L8_y2.41_k-0.01_g0_g60_h1.5_chiral_bcaaaa.npz	123de3547d9f240d333c57f8f21e8295	5621902	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1b/L8/L8_y2.41_k-0.01_g0_g60_h3_chiral_bcaaaa.npz	0bee68b8c148b2c0f762d1343cae60f3	5519954	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.25_chiral_bcaaaa.npz	08675156b011742ee0e3d080a5dc3e73	9083554	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	d4b130953d3a821eb9a9de7c1c312ee7	9083554	chain run (archive)	K8.7
+raw	results/xi_scan/K_N1_S1c/L6/L6_y2.41_k-0.01_g0_g60_h0.75_chiral_bcaaaa.npz	394c44350e67648926fd42aea5bbec0d	9083554	chain run (archive)	K8.7
+derived	data/derived/n1stage/TH/sym6/L6_y2_k-0.01_g0_g60_chiral_bcaaaa.npz	-	-	scripts/derive_th.py	K8.4,K8.5,K8.7
+derived	data/derived/n1stage/TH/sym6/L6_y2_k-0.01_g0_g60_h3_chiral_bcaaaa.npz	-	-	scripts/derive_th.py	K8.4,K8.5,K8.7
+derived	data/derived/n1stage/TH/sym8/L8_y2_k-0.01_g0_g60_chiral_bcaaaa.npz	-	-	scripts/derive_th.py	K8.9
+derived	data/derived/n1stage/TH/sym8/L8_y2_k-0.01_g0_g60_h3_chiral_bcaaaa.npz	-	-	scripts/derive_th.py	K8.9
+derived	data/derived/n1stage/TH/y3h3/L6_y3_k-0.01_g0_g60_h3_chiral_bcaaaa.npz	-	-	scripts/derive_th.py	K8.4,K8.5,K8.7
+derived	data/derived/n1stage/o4l_series.npz	-	-	scripts/derive_th.py	K8.7
+derived	data/derived/largen/mf_prod.json	-	-	scripts/derive_th.py	K8.6

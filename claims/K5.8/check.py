@@ -212,6 +212,12 @@ c.item(
     not p2["b2"] and p2["R_peak8"][0] < 1 and abs(p2["R_peak8"][0] - 0.88) < 0.005 and p2["b3"] and not p2["b"],
     "{0[0]:.2f}({0[1]:.2f})",
 )
+c.item(
+    "stage 1c pooled, h = 2: the light pair susceptibility chi_L/free at 8^4 (in per cent of free)",
+    (p2["chiLf8"][0], p2["chiLf8"][1], 100 * p2["chiLf8"][0]),
+    abs(p2["chiLf8"][0] - 0.0167) < 5e-4 and p2["chiLf8"][0] < 0.02,
+    "{0[0]:.4f}({0[1]:.4f}) = {0[2]:.1f} % of free",
+)
 e1, s1_ = p1["e_minus_free"]
 c.item(
     "stage 1c pooled, h = 1: e - e_free -> not resolved",

@@ -5,8 +5,8 @@ monotonically to r_L(2) + 2σ < 0.7 on both 6⁴ and 8⁴ with a volume-stable l
 triggered: r_L rises monotonically in 2σ steps at both volumes, the light pair-channel midpoint cosh mass grows with h on
 8⁴, 6⁴ and 6³×12, and the light momentum readout rises toward free. The trigger logic has power (an injected fall
 triggers it; the free null does not). In stage 1b the order's fall alert (a fall from h = 1 to 1.5 at > 3σ on 6³×12 and
-6⁴) stays silent, and an injected seesaw fires it. There is no critical seesaw of the light half at L ≤ 8 (the rise is the
-anti-seesaw, K8.1, K8.2).
+6⁴) stays silent, and an injected seesaw fires it. There is no critical seesaw of the light half at L ≤ 8 (the light half
+moves toward free instead, K8.1, K8.2, K8.4).
 
 **Numbers.** (M.1 check output)
 

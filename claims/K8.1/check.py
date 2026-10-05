@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""K8.1 -- anti-seesaw, tier 1: the partner-mass lemma (a Majorana mass on a Dirac partner can only lower the light
-gap), and the stored stage-1 facts at P_c: the epsilon/sigma channel collapses onto its SMG value, the light
+"""K8.1 -- tier 1: the partner-mass lemma (a Majorana mass on a Dirac partner can only lower the light gap), and the
+stored stage-1 facts at P_c: the epsilon/sigma channel falls to the size of its SMG value by h = 2, the light
 pair-channel midpoint cosh mass rises monotonically with h, no SSB of the light doublet, and part of the rise is
 present at fixed sigma (quench of stored configurations). Reads data/derived/n1stage/S1, the free baselines and
 data/configs/n1stage_quench_L6_y2.41_h0.npz (dense re-measurement of 4 configurations at two h; about 6-8 min)."""
