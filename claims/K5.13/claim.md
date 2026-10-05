@@ -1,15 +1,16 @@
-# K5.13 — Taste-projector coverage: the light/heavy split exists on 19.8 % of the momenta on 6⁴ and on all of them on 4⁴, 4³×8, 8⁴; on the complete pair (4⁴, 8⁴) at y = 3.0 the light pair susceptibility relative to free falls with the volume
+# K5.13 — Taste-projector coverage: the light/heavy split exists on 19.8 % of the momenta on 6⁴ and on all of them on 4⁴, 4³×8, 8⁴; on (4⁴, 8⁴), complete on both boxes, the light pair susceptibility relative to free falls with the volume at y = 3.0
 
 **Statement.** On all-antiperiodic boxes the light/heavy taste split exists only on the momenta where every cos p_μ ≠ 0;
 with p_μ = (2n+1)π/L this fails iff L ≡ 2 mod 4. The split is complete on 4⁴, 4³×8, 8⁴ and 12⁴; on 6⁴ it exists on
 (4/6)⁴ = 19.8 % of the momenta (the four of six per axis nearest a corner), on 6³×12 on 29.6 %, on 10⁴ on 41.0 %. Every
 6⁴ light-sector observable is therefore built from the infrared-most fifth of the modes and every 8⁴ one from all of them,
-so a (6⁴, 8⁴) ratio of a light-sector observable compares two different mode sets. On the complete pair (4⁴, 8⁴) at
-y = 3.0 the light pair susceptibility χ_L = V⟨φ_L²⟩ relative to free falls with the volume: e − e_free = −0.32(4) at
+so a (6⁴, 8⁴) ratio of a light-sector observable compares two different mode sets. On (4⁴, 8⁴), complete on both
+boxes, at y = 3.0 the light pair susceptibility χ_L = V⟨φ_L²⟩ relative to free falls with the volume: e − e_free = −0.32(4) at
 h = 2 and −0.44(7) at h = 1 (e = d ln χ_L/d ln V), against +0.51(9) on (6⁴, 8⁴) with the same reader — the two pairs
 differ by 8.9σ. At h = 2 χ_L/free falls monotonically over the three complete boxes, 0.0365 (4⁴) > 0.0255 (4³×8) > 0.0151
-(8⁴), and the 6⁴ value 0.0084 lies below all three. The (6⁴, 8⁴) growth of K5.8 and K5.11 is not reproduced on a pair
-with a complete taste split.
+(8⁴), and the 6⁴ value 0.0084 lies below all three. The (6⁴, 8⁴) growth of K5.8 and K5.11 is not reproduced on
+(4⁴, 8⁴). A complete taste split is not a source-free light doublet — the source has a light block on 8⁴ and none on
+4⁴ — so the like-for-like comparison is on source-free light modes; there the fall is steeper (K5.15).
 
 **Numbers.** (K5.13 check output)
 
@@ -38,8 +39,8 @@ where the incomplete box gives one). Sabotage: the pooled 8⁴ χ_L rescaled to 
 e ≈ 1 and e − e_free(4,8) = +0.86 / +0.88 at h = 1 / 2, and the falling-with-V clause fails on it.
 
 **Caveats.** 4⁴ is a small box (the SMG gap ≈ 0.7 makes ξ ≈ 1.4, so 4⁴ is about 3ξ across); the 4³×8 point and the
-monotone three-box series support the trend; a 12⁴ point at (3.0, 2) is the clean test. The 8⁴ data were not re-analysed
-on the 6⁴ mode set (this needs a dense re-measurement of stored configurations). The exponents are finite-size ratios
+monotone three-box series support the trend; a 12⁴ point at (3.0, 2) is the clean test. The re-analysis of stored 8⁴
+configurations on restricted mode sets (source-free modes; the 256 momenta nearest the corners) is K5.15, at h = 2. The exponents are finite-size ratios
 at L ≤ 8, not scaling dimensions.
 
 **Data.** `data/derived/n1stage/S0/L4/L4_y3_*_bcaaaa.npz`, `data/derived/n1stage/S0/L4x8/L4x8_y3_*_h2_*.npz`,

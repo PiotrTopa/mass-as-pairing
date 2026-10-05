@@ -134,19 +134,23 @@ production-boundary-condition feature at 4⁴/6⁴; K4 at P_c is quoted from K4.
 **Statement.** With h C_χ on one taste doublet of every flavour, every Lorentz-scalar mass of the other (light) doublet —
 Majorana or Dirac, flavour-symmetric or flavour sextet — is an exact symmetry zero of the action under its full symmetry
 group (the lattice stabiliser of C_χ with the one-site shifts, and the flavour SO(4)) on hypercubic-symmetric boxes and
-in infinite volume; the point group alone removes the flavour-symmetric masses but not two sextet strings. More
+in infinite volume; the point group alone removes the flavour-symmetric masses but not two sextet strings. The
+assumption of the general statement that no other invariant light bilinear is even in p holds for the same full group
+(an enumeration of the whole light corner algebra), not for the point group alone. More
 generally: if no light mass bilinear is invariant under the symmetry the explicit mass leaves, and that symmetry is not
 broken spontaneously, every mass-type part of the light two-point function vanishes, for elementary operators and for
 composite partners with the light quantum numbers alike; a seesaw light mass Δ M⁻¹ Δᵀ is such a part, so it needs
 spontaneous breaking ("no seesaw without re-Higgsing"). An interacting 0+1-dimensional model realises the statement
 exactly and shows what it does not fix: a symmetric light gap can still fall like 1/M with a vanishing mass-type part,
 so the scaling of a gap does not identify a Majorana mass — the mass-type part of the propagator does. What the lattice
-data decide is the symmetric gap and SSB: in the SMG phase (y = 3.0) the pre-registered criteria read **(a)** at h = 1
-and 2 — the light half keeps a symmetric gap of nearly unchanged size, with a small drift toward free, and the
-re-specified symmetry-breaking clause does not fire — on the stage-1b extensions and on two independent 8⁴ replicas per
-h. Spontaneous breaking at (3.0, h = 2) is not resolved at L ≤ 8 (neither established nor excluded): the growth of the
-light pair susceptibility relative to free on (6⁴, 8⁴) compares a 6⁴ box on which the taste split exists on 19.8 % of
-the momenta with a complete 8⁴ box, and on the complete pair (4⁴, 8⁴) the susceptibility relative to free falls with V.
+data decide is the light gap and SSB: in the SMG phase (y = 3.0) the pre-registered criteria read **(a)** at h = 1
+and 2 — the light half keeps its gap, nearly unchanged in size, with a small drift toward free, and the re-specified
+symmetry-breaking clause does not fire — on the stage-1b extensions and on two independent 8⁴ replicas per h. Whether a
+symmetry breaks at (3.0, h = 2) is not resolved at L ≤ 8 (neither established nor excluded) in the channel every SSB
+clause reads, the anti-self-dual (0,3) light Majorana channel: the growth of the light pair susceptibility relative to
+free on (6⁴, 8⁴) compares a 6⁴ box on which the taste split exists on 19.8 % of the momenta with every mode of 8⁴, and on
+source-free light modes — 4⁴, whose light doublet carries no source, against the source-free modes of 8⁴ — the
+susceptibility relative to free falls with V, faster than with all 8⁴ light modes.
 
 **Numbers.**
 - Symmetry zeros, point group: 4⁴ aaaa group 384, 32 elements fix C_χ, 16 of them flip the light Majorana mass; group
@@ -166,7 +170,11 @@ the momenta with a complete 8⁴ box, and on the complete pair (4⁴, 8⁴) the 
   0.39 below the threshold 0.5 of the re-specified clause; χ_L/free = 1.7 % at 8⁴; at h = 1 not resolved, 0.30(17) [K5.8, K5.11].
 - R_peak = [χ_L(0)/χ_L(p_min)]/free at h = 2 rises from 0.61(5) (6⁴) to 0.88(8) (8⁴), 2.8σ, and stays below 1 [K5.8, K5.13].
 - Taste-split coverage on all-antiperiodic boxes: complete on 4⁴, 4³×8, 8⁴, 12⁴; 19.8 % of the momenta on 6⁴, 29.6 % on 6³×12 [K5.13].
-- Complete pair (4⁴, 8⁴), same observable: e − e_free = −0.32(4) at h = 2 and −0.44(7) at h = 1, against +0.51(9) on (6⁴, 8⁴) with the same reader (8.9σ apart) [K5.13].
+- Pair (4⁴, 8⁴), same observable, all light modes: e − e_free = −0.32(4) at h = 2 and −0.44(7) at h = 1, against +0.51(9) on (6⁴, 8⁴) with the same reader (8.9σ apart) [K5.13].
+- Light block of the source, ‖P_L C_χ P_L‖/‖C_χ‖ (aaaa): 0 on 4⁴ and 6⁴, 0.3684 on 8⁴ (1536 of 4096 light momenta source-free), 0.1951 on 4³×8, 0.1730 on 6³×12 [K5.15].
+- Restricted-mode control, (3.0, h = 2), 90 stored 8⁴ configurations: χ_L/free = 0.0156(21) with all light modes, 0.0056(6) on the source-free modes, 0.0024(3) on the 256 momenta nearest the corners; e − e_free (4⁴, 8⁴) = −0.306(58), −0.676(49), −0.976(50); (6⁴, 8⁴) = +0.540(134), −0.352(110), −1.076(113) [K5.15].
+- P_c, pair (4⁴, 8⁴): e − e_free = −0.114(14), −0.080(8), −0.024(4), +0.025(4) at h = 0, 0.5, 1, 2; g(8⁴)/g(4⁴) = 0.878, 0.920, 0.926, 0.933 [K5.15].
+- (A4) on 4⁴: with the point group and its ℤ₄ extension twelve antisymmetric, even-in-p, non-mass-type light strings survive (pppp); with the one-site shifts only the identity and the taste chirality X₁₃Z₀₁₂₃ (symmetric kernels) and eight odd-in-p strings survive, 10 of 496 on aaaa [K5.14].
 - h = 2, χ_L/free on the complete boxes: 0.0365 (4⁴) > 0.0255 (4³×8) > 0.0151 (8⁴); 6⁴: 0.0084, below all three [K5.13].
 - Stage-1c integrity: nine chains intact; the replicas agree with each other and with stage 1b (smallest p 0.16); the
   per-mille drift of the 8⁴ h = 1 chain lies in its stored stage-1 stretch (p = 0.005) [K5.9].
@@ -174,9 +182,10 @@ the momenta with a complete 8⁴ box, and on the complete pair (4⁴, 8⁴) the 
   the SSB clause (b) (e − 2σ > 0.5 on (6⁴, 8⁴)) fired at (3.0, h = 2): e = 0.786(129), e − 2σ = 0.527, e_free = 0.387 [K5.5].
 - Stage 0 gates as written: G1 passes, G2 fails at h = 2 on r_L = 1.020(6) (+3.35σ), G3 fails [K5.3].
 
-**Links.** `claims/K5.1/` … `claims/K5.13/`; code `masspairing/analysis/stage1b.py`, `stage1c.py`,
-`mass_strings.py`, `complete_pair.py`, `masspairing/algebra/ed01.py`; data `data/derived/n1stage/`,
-`data/derived/free/`, `data/derived/n1inst/K512_mass_strings.json`; tables `results/K5_verdict_stage1.csv`,
+**Links.** `claims/K5.1/` … `claims/K5.15/`; code `masspairing/analysis/stage1b.py`, `stage1c.py`,
+`mass_strings.py`, `complete_pair.py`, `corner_invariants.py`, `restricted_modes.py`, `masspairing/algebra/ed01.py`,
+`scripts/run_k5_control.py`; data `data/derived/n1stage/`, `data/derived/free/`, `data/derived/n1inst/K512_mass_strings.json`,
+`data/derived/k5control/`; tables `results/K5_verdict_stage1.csv`,
 `results/K5_verdict_1b.csv`, `results/K5_verdict_1c.csv`, `results/K5_mass_strings.csv`,
 `results/K5_complete_pair.csv`, `results/K5_taste_coverage.csv`; figures
 [`figures/K5_h2_replicas.pdf`](figures/K5_h2_replicas.pdf),
@@ -191,9 +200,12 @@ free-sized shape effect (free 6³×12: −0.00085 per flavour at h = 2, 5 % of t
 specific here is its instance in an SMG phase and the measurement. Verdict (a) is read at y = 3.0 only; at P_c the light
 half moves toward free with h (K8). **Volume pairs:** on all-antiperiodic boxes the taste split exists on every momentum
 for L ≡ 0 mod 4 and on 19.8 % of them on 6⁴ (the infrared-most fifth of the modes), so every (6⁴, 8⁴) light-sector ratio
-compares two different mode sets; the h = 2 growth of K5.8/K5.11 is such a ratio and is not reproduced on the complete
-pair (4⁴, 8⁴), where χ_L/free falls with V at every h [K5.13]. 4⁴ is about 3ξ across in the SMG phase; a 12⁴ point at
-(3.0, 2) is the clean test. Spontaneous breaking at (3.0, h = 2) is not resolved at L ≤ 8. **Criteria:** the stage-1
+compares two different mode sets; the h = 2 growth of K5.8/K5.11 is such a ratio and is not reproduced on (4⁴, 8⁴),
+where χ_L/free falls with V at every h [K5.13]. A complete taste split is not a source-free light doublet: the source has
+a light block on 8⁴ (0.368 of its norm), none on 4⁴ and 6⁴ [K5.15], so (4⁴, 8⁴) with all modes also compares unlike light
+doublets; restricted to the source-free 8⁴ modes the fall steepens (control at h = 2 only, 90 configurations) [K5.15].
+4⁴ is about 3ξ across in the SMG phase; a 12⁴ point at (3.0, 2) is the clean test. Whether a symmetry breaks at
+(3.0, h = 2) is not resolved at L ≤ 8 in the measured (0,3) channel. **Criteria:** the stage-1
 SSB clause (b) fired by its letter at (3.0, h = 2) [K5.5]; the stage-1b order re-specified (b) relative to free (e −
 e_free − 2σ > 0.5 together with R_peak and χ_L/free clauses), before any new trajectory and after the stage-1 row at the
 same (y, h) had been read; stage 1c applies the re-specified clauses unchanged to independent seeds. The stage-1

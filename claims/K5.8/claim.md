@@ -1,4 +1,4 @@
-# K5.8 — stage 1b and 1c at y = 3.0 (SMG), by the pre-registered clauses: (a) at h = 1 and h = 2 — the light half keeps a symmetric gap of nearly unchanged size, with a small drift toward free; reproduced on two independent 8⁴ replicas per h
+# K5.8 — stage 1b and 1c at y = 3.0 (SMG), by the pre-registered clauses: (a) at h = 1 and h = 2 — the light half keeps its gap, nearly unchanged in size, with a small drift toward free; reproduced on two independent 8⁴ replicas per h
 
 **Statement.** With the explicit taste-chiral Majorana mass h C_χ on the heavy doublet, in the SMG phase (y = 3.0), the
 pre-registered clauses read class **(a)** at h = 1 and h = 2, on the stage-1b extensions (new samples; 8⁴: 100
@@ -6,7 +6,7 @@ measurements per h, 6⁴: 250) and on two independent 8⁴ replicas per h (stage
 stored h = 0 chains as denominators: the light pair-channel midpoint cosh mass relative to h = 0 and to the free ratio is
 r_L^cosh(8⁴) = 0.977(2) at h = 1 and 0.921(2) at h = 2 on the replicas (0.976(2), 0.920(2) on stage 1b), and the light
 momentum readout G_L(p_min)/free is 0.0030 / 0.0034 (a Luttinger-zero-like 0.3 % of free; 1.3–1.5 % on 6⁴, falling with
-V). The symmetric gap is nearly unchanged, with a small drift toward free: r_L falls by 2 % and 8 %, and G_L(p_min)/free
+V). The gap is nearly unchanged, with a small drift toward free: r_L falls by 2 % and 8 %, and G_L(p_min)/free
 rises from 0.0028 at h = 0. The SSB clause (b) does not fire at either h. At h = 2 the light pair susceptibility grows faster with volume
 than the free one: e − e_free = 0.600(104) on the replicas (5.8σ; 0.456(137) on stage 1b, 0.551(93) pooled with it). This
 is the recorded partial outcome "growth relative to free, no SSB-scale exponent", confirmed on the independent replicas:
@@ -51,10 +51,12 @@ Stage 1c, two independent 8⁴ replicas per h (6⁴ side: the stage-1b new row; 
 
 **Scope.** The h = 2 growth e − e_free = 0.600(104) is a (6⁴, 8⁴) ratio between a box on which the light/heavy
 taste split exists on 19.8 % of the momenta (6⁴, the infrared-most fifth of the modes) and a box on which it is
-complete (8⁴), so it is not a volume exponent of one observable. On the complete pair (4⁴, 8⁴) the same susceptibility
-relative to free falls with the volume (e − e_free = −0.32(4) at h = 2, −0.44(7) at h = 1), and at h = 2 it falls
-monotonically over the complete boxes 4⁴, 4³×8, 8⁴ with the 6⁴ value below all three (K5.13). R_peak rises from 0.61(5)
-on 6⁴ to 0.88(8) on 8⁴ (2.8σ) and stays below 1. Spontaneous breaking at (3.0, h = 2) is not resolved at L ≤ 8: neither
+complete (8⁴), so it is not a volume exponent of one observable. On (4⁴, 8⁴) the same susceptibility relative to free
+falls with the volume (e − e_free = −0.32(4) at h = 2, −0.44(7) at h = 1), and at h = 2 it falls monotonically over the
+boxes 4⁴, 4³×8, 8⁴ with the 6⁴ value below all three (K5.13). The like-for-like comparison is on source-free light modes
+(the source has a light block on 8⁴ and none on 4⁴): restricted to the source-free 8⁴ modes the fall on (4⁴, 8⁴) is
+steeper, −0.68(5) at h = 2 (K5.15). R_peak rises from 0.61(5) on 6⁴ to 0.88(8) on 8⁴ (2.8σ) and stays below 1. Whether a
+symmetry breaks at (3.0, h = 2) is not resolved at L ≤ 8 in the measured anti-self-dual (0,3) channel: neither
 established nor excluded. The clause (b) here is the stage-1b re-specification relative to free, written after the
 stage-1 row at the same (y, h) had flagged (b) by its letter (e = 0.786(129), K5.5).
 
@@ -77,7 +79,7 @@ free return: g(2) := 1, m(2) := 0.25 m(0)) → (c); S6′ (free null: r_L = 1, �
 sabotage — the pooled χ_L(8⁴, h = 2) set to its free-scaling value gives e − e_free = 0.000(104), "NOT REPRODUCED".
 
 **Caveats.** L ≤ 8; the light pair-channel gap has no plateau at L_t ≤ 12 (K5.7 E8), so it is an effective mass at the
-stated t, not a single-fermion mass; the verdict concerns the symmetric gap and SSB only (a light scalar mass term is a
+stated t, not a single-fermion mass; the verdict concerns the light gap and SSB only (a light scalar mass term is a
 symmetry zero, K5.2). The h = 2 partial outcome is a real growth (5.8σ on the replicas) of a susceptibility at 1.7 % of
 free, measured on one volume pair (6⁴, 8⁴): whether it is incipient symmetry breaking is not excluded by two volumes; its
 central value exceeds the SSB threshold of the clause, its 2σ edge does not.

@@ -8,3 +8,4 @@ build/
 dist/
 /scratch/
 claims/*/check_output.txt
+/k5control_work/

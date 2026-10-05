@@ -1,0 +1,28 @@
+kind	path	md5	bytes	produced_by	used_by
+derived	data/derived/k5control/control_L8_y3_h2.npz	-	-	scripts/run_k5_control.py	K5.15
+derived	data/derived/k5control/free_L8_h2_restricted.json	-	-	scripts/run_k5_control.py	K5.15
+config	data/configs/n1_L4_y3_h2_aaaa.npz	-	-	scripts/derive_configs.py	K5.15
+config	data/configs/n1_L6_y3_h2_aaaa.npz	-	-	scripts/derive_configs.py	K5.15
+derived	data/derived/free/free_L4_aaaa.json	-	-	scripts/derive_n1inst.py	K5.15
+derived	data/derived/free/free_L4x8_aaaa.json	-	-	scripts/derive_n1inst.py	K5.15
+derived	data/derived/free/free_L6_aaaa_h1.5_3.json	-	-	scripts/derive_n1inst.py	K5.15
+derived	data/derived/free/free_L8_aaaa.json	-	-	scripts/derive_n1inst.py	K5.15
+derived	data/derived/free/free_baselines.json	-	-	scripts/derive_n1inst.py	K5.15
+derived	data/derived/n1stage/S0/L4/L4_y2.41_k-0.01_g0_g60_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S0/L4/L4_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S0/L4/L4_y2.41_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S0/L4/L4_y2.41_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S0/L4/L4_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S1/L6/L6_y2.41_k-0.01_g0_g60_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S1/L6/L6_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S1/L6/L6_y2.41_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S1/L6/L6_y2.41_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S1/L8/L8_y2.41_k-0.01_g0_g60_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S1/L8/L8_y2.41_k-0.01_g0_g60_h0.5_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S1/L8/L8_y2.41_k-0.01_g0_g60_h1_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S1/L8/L8_y2.41_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S1b/L6/L6_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage.py	K5.15
+derived	data/derived/n1stage/S1c/L8_h2_rA/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.15
+derived	data/derived/n1stage/S1c/L8_h2_rB/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	-	-	scripts/derive_n1stage1c.py	K5.15
+raw	results/xi_scan/K_N1_S1c/L8_h2_rA/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	692e96aa9a116b0c013dd0acdb829460	10617566	chain run (archive)	K5.15
+raw	results/xi_scan/K_N1_S1c/L8_h2_rB/L8_y3_k-0.01_g0_g60_h2_chiral_bcaaaa.npz	e1888471a93bd3b367407d81c1dec623	10617582	chain run (archive)	K5.15

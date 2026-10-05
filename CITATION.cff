@@ -7,14 +7,14 @@ authors:
     given-names: Piotr
 license: MIT
 repository-code: "https://github.com/PiotrTopa/mass-as-pairing"
-version: "1.0.0"
+version: "0.9.3"
+doi: "10.5281/zenodo.23117210"
 preferred-citation:
   type: article
   title: "Mass as pairing"
   authors:
     - family-names: Topa
       given-names: Piotr
-  doi: "10.XXXX/PLACEHOLDER"
   year: 2026
 identifiers:
   - type: doi
