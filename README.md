@@ -18,7 +18,8 @@ generation and its lattice proxy (four reduced staggered flavours with an ε ver
   whether a symmetry breaks at the largest explicit mass is not resolved at L ≤ 8 in the channel read (the
   anti-self-dual (0,3) light Majorana channel) — the growth of the light pair susceptibility on (6⁴, 8⁴) compares the
   infrared-most fifth of the 6⁴ modes with every 8⁴ mode, and on source-free light modes (4⁴ against the source-free
-  8⁴ modes) that susceptibility relative to free falls with the volume;
+  8⁴ modes) that susceptibility relative to free falls with the volume; measured in every light mass channel, none
+  grows faster than free at the symmetry-breaking scale on (4⁴, 8⁴);
 - **K6** the corner-block frequency exponent as a per-configuration pole/zero readout;
 - **K7** the SMG transition shows no first-order signature at L ≤ 8;
 - **K8** at the critical point the explicit mass moves the critical line to larger y (large-N sign; the light
