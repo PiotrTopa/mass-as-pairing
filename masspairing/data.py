@@ -42,11 +42,12 @@ ARCHIVE_BUNDLES = {
     r"|results/laneK1/(?!free_L6_aaaa_h0\.25_0\.5_0\.75\.json$)",
     "mass-as-pairing-data_n1-stage1c.tar.gz": r"results/xi_scan/K_N1_S1c/"
     r"|results/laneK1/free_L6_aaaa_h0\.25_0\.5_0\.75\.json$",
+    "mass-as-pairing-data_n1-k8.tar.gz": r"results/(laneTH|laneTHP)/",
 }
 
 
-# raw archive files that no bundle of the deposit holds yet (archive column "pending" in data/MANIFEST.tsv)
-ARCHIVE_PENDING = r"results/laneTH/|results/laneTHP/"
+# raw archive files that no bundle of the deposit holds yet (archive column "pending" in data/MANIFEST.tsv); none
+ARCHIVE_PENDING = r"(?!)"
 
 
 def archive_bundle(rel):

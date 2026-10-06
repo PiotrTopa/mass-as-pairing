@@ -53,9 +53,8 @@ make figures    # figures in figures/
 ```
 
 All of these run from the committed derived data. Rebuilding the derived data needs the raw chain archive, deposited
-on Zenodo (DOI 10.5281/zenodo.23117210, five bundles, about 0.7 GB; files, md5 sums and bundles in
-[data/MANIFEST.tsv](data/MANIFEST.tsv); six small raw files of K8.4–K8.9, marked `pending` there, are not yet in the
-deposit — their derived data are committed, so every check runs):
+on Zenodo (DOI 10.5281/zenodo.23117210, six bundles, about 0.7 GB; files, md5 sums and bundles in
+[data/MANIFEST.tsv](data/MANIFEST.tsv)):
 
 ```
 python scripts/fetch_data.py --out archive            # download, check md5 sums, unpack

@@ -58,7 +58,7 @@ symmetric side; K8.9).
 
 **Data.** `data/derived/n1stage/{S0/L4,S1,S1b,S1c}/`, `data/derived/n1stage/TH/{sym6,y3h3}/*.npz`, free baselines in
 `data/derived/free/`. Raw archive: `results/xi_scan/K_N1_S0/L4/`, `results/xi_scan/K_N1_S1{,b,c}/`,
-`results/laneTH/{sym6,y3h3}/*.npz` (archive pending, see data/MANIFEST.tsv).
+`results/laneTH/{sym6,y3h3}/*.npz` (bundle `n1-k8`).
 
 **Check.** `python claims/K8.5/check.py` (≈ 20 s).
 

@@ -43,8 +43,8 @@ statement (L ≤ 8). The pair channel has no plateau at L_t ≤ 12 (K5.7): m is 
 y = 2.0 / 3.0 (h = 3) chains have 88 measurements each.
 
 **Data.** `data/derived/n1stage/{S1,S1b,S1c}/`, `data/derived/n1stage/TH/{sym6,y3h3}/*.npz`, free baselines in
-`data/derived/free/`. Raw archive: `results/xi_scan/K_N1_S1{,b,c}/`, `results/laneTH/{sym6,y3h3}/*.npz` (archive pending,
-see data/MANIFEST.tsv).
+`data/derived/free/`. Raw archive: `results/xi_scan/K_N1_S1{,b,c}/`, `results/laneTH/{sym6,y3h3}/*.npz` (bundle
+`n1-k8`).
 
 **Check.** `python claims/K8.4/check.py` (≈ 15 s).
 

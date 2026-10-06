@@ -62,7 +62,7 @@ of item 5 was formed after the data were known. The 6⁴ y* values are recorded 
 its 4⁴ rows are checked live.
 
 **Data.** `data/derived/n1stage/{S1,S1b}/` (the P_c rows), `data/derived/largen/mf_prod.json` (the recorded y* scan; raw
-archive `results/laneTHP/mf_prod.json`, archive pending).
+archive `results/laneTHP/mf_prod.json`, bundle `n1-k8`).
 
 **Check.** `python claims/K8.6/check.py` (≈ 6–7 min on one thread).
 

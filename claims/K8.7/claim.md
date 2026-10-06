@@ -25,7 +25,7 @@ references at y = 2.0 (h = 0, 3) and (3.0, 3) are the chains of K8.5; y = 3.0, h
 
 **Data.** `data/derived/n1stage/{S1,S1b,S1c}/`, `data/derived/n1stage/TH/{sym6,y3h3}/*.npz` (their own ts_O4L),
 `data/derived/n1stage/o4l_series.npz` (ts_O4L of the stage-1/1b/1c chains, one array per derived chain). Raw archive:
-`results/xi_scan/K_N1_S1{,b,c}/`, `results/laneTH/{sym6,y3h3}/*.npz` (archive pending).
+`results/xi_scan/K_N1_S1{,b,c}/`, `results/laneTH/{sym6,y3h3}/*.npz` (bundle `n1-k8`).
 
 **Check.** `python claims/K8.7/check.py` (≈ 10 s).
 

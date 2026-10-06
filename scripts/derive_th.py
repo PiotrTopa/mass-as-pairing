@@ -165,8 +165,8 @@ def main():
     root = archive_root()
     assert root is not None, "set MASSPAIRING_ARCHIVE to the archive root"
     missing = [rel for rel in TH_CHAINS + SYM8_CHAINS + ("results/laneTHP/mf_prod.json",) if not (root / rel).exists()]
-    if missing:  # archive files marked "pending" in data/MANIFEST.tsv (not yet in the deposit)
-        print(f"derive_th: {len(missing)} archive files not present (pending deposit); committed derived data kept")
+    if missing:  # bundle n1-k8 not unpacked into the archive root
+        print(f"derive_th: {len(missing)} archive files not present (bundle n1-k8); committed derived data kept")
         return
     th_chains(root)
     sym8_chains(root)

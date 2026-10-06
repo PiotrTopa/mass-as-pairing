@@ -44,7 +44,7 @@ p_min ≈ π/L.
 
 **Data.** `data/derived/n1stage/TH/sym8/*.npz` (the 8⁴ y = 2.0 pair), `data/derived/n1stage/{S1,S1b}/L8/`,
 `data/derived/n1stage/{S1,S1b}/L6/`, `data/derived/n1stage/TH/sym6/`, free baselines in `data/derived/free/`. Raw
-archive: `results/laneTHP/sym8/h{0,3}/*.npz` (archive pending, see data/MANIFEST.tsv).
+archive: `results/laneTHP/sym8/h{0,3}/*.npz` (bundle `n1-k8`).
 
 **Check.** `python claims/K8.9/check.py` (≈ 15 s).
 
