@@ -4,7 +4,8 @@ title: "Mass as pairing: companion code and certified claims"
 type: software
 authors:
   - family-names: Topa
-    given-names: Piotr
+    given-names: "Piotr Stanisław"
+    orcid: "https://orcid.org/0009-0005-2870-2463"
 license: MIT
 repository-code: "https://github.com/PiotrTopa/mass-as-pairing"
 version: "1.0.1"
@@ -14,7 +15,8 @@ preferred-citation:
   title: "Mass as pairing"
   authors:
     - family-names: Topa
-      given-names: Piotr
+      given-names: "Piotr Stanisław"
+      orcid: "https://orcid.org/0009-0005-2870-2463"
   year: 2026
 identifiers:
   - type: doi
